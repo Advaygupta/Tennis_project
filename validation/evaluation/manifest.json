@@ -1,0 +1,51 @@
+{
+  "prediction_status": "original provisional predictions, not regenerated after upstream corrections",
+  "rows": 51885,
+  "source": {
+    "rows": 51885,
+    "columns": [
+      "p",
+      "q",
+      "best_of",
+      "playerA_wins",
+      "set_win_probA",
+      "match_win_probA"
+    ],
+    "sha256": "5cd1c7223250fe07f52bdc11355d93ae1982c0ea017d258ac72e0464c72cea62",
+    "actual_format": "joblib/pickle",
+    "match_ids_present": false,
+    "dates_present": false
+  },
+  "conversion": "CSV values and row order verified against original joblib DataFrame",
+  "evaluation_runtime": {
+    "python": "3.13.9",
+    "third_party_dependencies": []
+  },
+  "independent_metric_reference_versions": {
+    "python": "3.13.9",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "joblib": "1.4.2",
+    "pyarrow": "19.0.0",
+    "scikit_learn": "1.6.1"
+  },
+  "missing": [
+    "v2 test predictions on common sample",
+    "ranking and Elo baseline comparison",
+    "exact original upstream source Git commit and guaranteed access to frozen raw snapshot",
+    "original Colab training dependency versions"
+  ],
+  "files": {
+    "evaluate_v1.py": "33f073a1dd27490fec1d7567943df6945fa0e9cde5d6bbd07f011e2bc25ccc0e",
+    "expected_metrics.json": "61af4dab5be90ba814b0cbf36c29e29479e79d81295c62c8ca0050dda1362832",
+    "README.md": "5998378a9cd0f0d976c872927058b3e88ed815baeae0e2a476d2116641fe67f4",
+    "requirements.txt": "4635074803d36a2f3b59df0346646c3473b89968109f4d7e62d19c241aeef9b2",
+    "source_data_manifest.json": "e6f23d4e716af0dffaab205db051a6df724d3e95815062669c77e3fe25afd95d",
+    "split_manifest.json": "83dd0fd8953f664a8ac12a2091d8126a30843dae41ff6d16ca28f03271685f4d",
+    "split_membership.csv": "c3585e57a38ba721ee308e37e0e4eb53e6fe497ac2876868be60bcdef1bf2890",
+    "v1_results.csv": "84780352563a159017e1d82b28ff558cc17ccdc00c8d47e55ee025d0cc1012c6"
+  },
+  "prediction_mapping": "Reconstructed IDs and tournament dates added; see split_manifest.json for checks and limits",
+  "source_data_snapshot": "source_data_manifest.json; exact upstream commit unknown",
+  "split_manifest": "split_manifest.json"
+}

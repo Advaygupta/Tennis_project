@@ -1,0 +1,54 @@
+{
+  "status": "Reconstructed from local cleaned data and original split rule; checked against saved local v1 split datasets",
+  "scope": "Original v1 only; no assertion of leakage-free splits or corrected feature generation",
+  "ordering": "Existing tournament_date, tournament_name, round_rank order retained",
+  "eligibility": "Nonmissing surface; both players have positive service-point counts and observed first/second-serve points won",
+  "split_rule": "First floor(0.70*N) rows training; next to floor(0.80*N) validation; remainder test",
+  "eligible_rows": 259423,
+  "cleaned_dataset_sha256": "2fe16578edabef94e78848fa77eaa6e7f416d008679ef54dbef105b9d56dbe62",
+  "splits": [
+    {
+      "split": "train",
+      "rows": 181596,
+      "minimum_tournament_date": "1990-12-31",
+      "maximum_tournament_date": "2022-07-25",
+      "saved_dataset": "v1_train.parquet",
+      "saved_dataset_sha256": "a7ebded3a7205788e2f76ebc937af81cbda8f6ca1b9c3f9cce96567575af985b",
+      "row_order_labels_and_format_match": true,
+      "serve_target_max_absolute_errors": {
+        "playerA": 2.9658349776084947e-08,
+        "playerB": 2.965256196141297e-08
+      }
+    },
+    {
+      "split": "validation",
+      "rows": 25942,
+      "minimum_tournament_date": "2022-07-25",
+      "maximum_tournament_date": "2024-07-01",
+      "saved_dataset": "v1_val.parquet",
+      "saved_dataset_sha256": "e0d8981d05074737e718d469949efffb5f2c60219ca25d720e9cc7a61c3571e3",
+      "row_order_labels_and_format_match": true,
+      "serve_target_max_absolute_errors": {
+        "playerA": 2.962386536076167e-08,
+        "playerB": 2.962170220222049e-08
+      }
+    },
+    {
+      "split": "test",
+      "rows": 51885,
+      "minimum_tournament_date": "2024-07-01",
+      "maximum_tournament_date": "2026-06-01",
+      "saved_dataset": "v1_test.parquet",
+      "saved_dataset_sha256": "7df106b5e44741f38d5faade0fbd47b29b8d4cba8d23965b867fc7d3526d6a5e",
+      "row_order_labels_and_format_match": true,
+      "serve_target_max_absolute_errors": {
+        "playerA": 2.963005463207935e-08,
+        "playerB": 2.962386536076167e-08
+      }
+    }
+  ],
+  "adjacent_splits_share_boundary_tournament_dates": true,
+  "date_semantics": "Tournament-week date, generally Monday; not actual match date or timestamp",
+  "prediction_mapping": "Original result row order matched local test labels and best_of; local test target sequence checked against reconstructed rows. No original prediction match identifiers existed, so this is reconstructed provenance, not an independently recorded prediction ID.",
+  "membership_file": "split_membership.csv"
+}
