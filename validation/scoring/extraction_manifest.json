@@ -1,0 +1,9 @@
+{
+  "notebook_sha256": "94640d6adc8b5ee8b9d27fa69b9ed767c6e434db44993c9d99839eaca53cb6a3",
+  "cell_index_zero_based": 230,
+  "functions": [
+    "game_win_probab",
+    "set_win_probab"
+  ],
+  "notebook_executed": false
+}

@@ -1,0 +1,36 @@
+{
+  "grid_points": 439,
+  "grid_step": 0.05,
+  "formats": [
+    3,
+    5
+  ],
+  "absolute_tolerance": 2e-12,
+  "scalar_comparisons": 4390,
+  "maximum_absolute_errors": {
+    "game": 1.1102230246251565e-16,
+    "first_server_set": 4.440892098500626e-16,
+    "first_server_match": 9.992007221626409e-16,
+    "notebook_set": 6.661338147750939e-16,
+    "notebook_match": 1.2212453270876722e-15,
+    "polynomial": 1.3322676295501878e-15,
+    "symmetry": 9.992007221626409e-16
+  },
+  "failures": [],
+  "simulation_seed": 20261019,
+  "simulation_matches": 36000,
+  "simulation_cases": 36,
+  "all_simulation_checks_passed": true,
+  "symmetry_boundary_monotonicity_checks_passed": true,
+  "nonterminating_corners_excluded": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "extracted_formula_sha256": "dcb3c867680a7aa1b7aef05c28e33f5c2626f1361feb75fb53b565e209046af5"
+}
