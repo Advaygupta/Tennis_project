@@ -14,3 +14,5 @@ Copy these files from Google Drive into this directory:
 
 These files are ignored by Git. They contain row-level outcomes and predictions and should be published only after confirming the applicable redistribution terms.
 
+The files supplied for the verified run matched the SHA-256 values in `../artifact_checksums.json`.
+

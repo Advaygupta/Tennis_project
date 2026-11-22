@@ -47,7 +47,7 @@ For lightweight paired evaluation, only the three files in `reproduction/artifac
 ## Evidence distinctions
 
 - Notebook hashes and displayed outputs can be verified immediately.
-- Headline numbers remain saved execution outputs until the compact predictions are added and evaluated.
+- Headline numbers were independently recomputed from the supplied compact prediction artifacts; their hashes and aggregate metrics are committed under `reproduction/`.
 - `validation/scoring/` validates the earlier standard 6-6 seven-point-tiebreak formula, not the complete historical deciding-set mapping.
 - Exact bit-for-bit retraining is not claimed.
 

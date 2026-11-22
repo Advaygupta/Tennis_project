@@ -8,11 +8,10 @@
     "log_loss": 0.6311599058905419
   },
   "v2_1": {
-    "accuracy": 0.69047,
-    "roc_auc": 0.76048,
-    "brier_score": 0.19887,
-    "log_loss": 0.58105,
-    "display_precision": 5
+    "accuracy": 0.6904734254635544,
+    "roc_auc": 0.7604806870433078,
+    "brier_score": 0.19887454505339147,
+    "log_loss": 0.581048717303036
   }
 }
 

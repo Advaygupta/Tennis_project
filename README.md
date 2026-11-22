@@ -37,12 +37,12 @@ Rows with a missing surface are excluded before the final feature table, which i
 
 ## Saved test outputs
 
-These values are recorded in the executed notebooks. They have not yet been independently regenerated from the private Drive artifacts in this repository revision.
+These values were recomputed from the saved V1.1 and V2.1 prediction artifacts after one-to-one alignment with the test metadata. The exact aggregate output is committed as `reproduction/paired_metrics.csv`; row-level artifacts remain private.
 
 | Approach | Accuracy | ROC-AUC | Brier score | Log loss |
 |---|---:|---:|---:|---:|
-| V1.1 regression plus Markov | 0.68904 | 0.75989 | 0.20671 | 0.63116 |
-| V2.1 equal classifier ensemble | 0.69047 | 0.76048 | 0.19887 | 0.58105 |
+| V1.1 regression plus Markov | 0.68904115 | 0.75988840 | 0.20670643 | 0.63115991 |
+| V2.1 equal classifier ensemble | 0.69047343 | 0.76048069 | 0.19887455 | 0.58104872 |
 
 Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved metrics, but the accuracy and ROC-AUC differences are small.
 
@@ -77,5 +77,5 @@ The notebooks download historical men's tennis records from Jeff Sackmann's [`te
 
 ## Reproducibility claim
 
-The repository supports inspection of the full methodology, verification of the saved notebook outputs, and metric recomputation when the compact saved prediction artifacts are supplied. A full from-scratch rerun is possible through the notebooks but is not one-command or bit-for-bit reproducible because the workflow uses Google Colab, Google Drive paths, a moving upstream dataset, GPU-dependent libraries and long tuning runs.
+The repository supports inspection of the methodology, verification of notebook outputs, and a completed paired metric recomputation from the saved prediction artifacts. A full from-scratch rerun is possible through the notebooks but is not one-command or bit-for-bit reproducible because the workflow uses Google Colab, Google Drive paths, a moving upstream dataset, GPU-dependent libraries and long tuning runs.
 

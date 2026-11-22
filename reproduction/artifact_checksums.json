@@ -1,0 +1,17 @@
+{
+  "algorithm": "sha256",
+  "artifacts": {
+    "matches_v1_1_metadata.csv": {
+      "sha256": "943813de874ded92c15d6542b7e4684b7a2b992ea1871bb99d152819533c989f",
+      "bytes": 50676517
+    },
+    "v1_1_results.joblib": {
+      "sha256": "ed2982fda03f9c3735b6694040451f29f833f5a305a05ab854a8fe2fb5b75912",
+      "bytes": 2981659
+    },
+    "v2_1_test_match_probabilities.parquet": {
+      "sha256": "1342c40da095d4551cd6f0a89f0981fb294b33c0a069f8df734faef1ab01a021",
+      "bytes": 3485107
+    }
+  }
+}

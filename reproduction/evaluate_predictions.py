@@ -73,6 +73,13 @@ def main() -> None:
         metrics("V1.1 regression plus Markov", paired["playerA_wins"], paired["v1_probability"]),
         metrics("V2.1 equal classifier ensemble", paired["playerA_wins"], paired["v2_probability"]),
     ])
+    for row, key in zip(result.to_dict("records"), ("v1_1", "v2_1")):
+        for metric in ("accuracy", "roc_auc", "brier_score", "log_loss"):
+            if not np.isclose(row[metric], EXPECTED[key][metric], rtol=0, atol=1e-12):
+                raise ValueError(
+                    f"{key} {metric} differs from expected: "
+                    f"{row[metric]} vs {EXPECTED[key][metric]}"
+                )
     result.to_csv(HERE / "paired_metrics.csv", index=False)
     print(result.to_string(index=False, float_format=lambda x: f"{x:.8f}"))
     print(f"Verified {expected_n:,} paired test matches.")
