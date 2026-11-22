@@ -1,3 +1,0 @@
-# Evaluation and scoring use only the Python standard library.
-# Tested evaluation runtime: Python 3.13.9
-# No pip packages required.

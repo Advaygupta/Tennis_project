@@ -1,117 +1,81 @@
-# Tennis Match Prediction with Machine Learning and an Analytical Scoring Model
+# Tennis Match Prediction
 
-This repository documents an ongoing tennis-modelling project that combines statistical learning with an analytical representation of tennis scoring. Machine-learning regressors estimate each player's probability of winning a point on serve, and those estimates are propagated through game, set, and match calculations to obtain a pre-match win probability.
+This repository contains the corrected V1.1 regression-plus-Markov model and the V2.1 direct classifier used for a paired comparison on the same chronological test set.
 
-The project uses historical men's tennis data maintained by [Jeff Sackmann](https://github.com/JeffSackmann/tennis_atp). His public `tennis_atp` repository is the sole match-data source used in the principal Version 1 experiment.
+V1.1 predicts each player's serve-point win probability and passes those estimates through an analytical tennis scoring model. V2.1 predicts the probability that Player A wins the match directly. Both approaches use the same eligible matches, features, labels and train/validation/test partitions.
 
-## Project status
+## Main corrections
 
-This is an archival research repository for an ongoing project. The code was developed iteratively in Google Colab, with intermediate datasets and trained models stored in Google Drive. The executed notebooks preserve the original workflow and experimental outputs, but the project was not initially designed as a portable software package.
+- Duplicate records are resolved before feature construction; ambiguous groups are retained in audit files.
+- Historical features use a 10-day eligibility lag and tournament-date batches, avoiding unsupported within-day match ordering.
+- Elo and other player histories are read before the current batch enters history.
+- Imputation and categorical encoding are fitted on training data only.
+- V1.1 uses an inverse-validation-MAE ensemble of Elastic Net, LightGBM, XGBoost and CatBoost.
+- The analytical model supports standard sets and historical Grand Slam deciding-set formats.
+- V2.1 reuses the V1.1 modeling sample and exact chronological partitions.
 
-The reported figures should therefore be read as preliminary out-of-sample results. They may change slightly after the final reproducibility and consistency review.
-
-## Version 1 framework
-
-Version 1 separates the prediction problem into two stages:
-
-```text
-Historical match data
-        |
-Pre-match feature engineering
-        |
-Serve-point probability models
-        |  p: Player A wins a point on serve
-        |  q: Player B wins a point on serve
-        |
-Analytical tennis-scoring model
-        |
-Match-winning probability
-```
-
-The statistical-learning stage uses ranking, Elo, recent form, matchup, fatigue, serve, return, surface, experience, physical, seeding, and tournament-context features. The analytical stage converts the estimated serve-point probabilities into game-, set-, and match-winning probabilities using the rules of tennis scoring.
-
-## Data and prediction targets
-
-The source-data collection covers annual ATP, Challenger/qualifying, and Futures files from 1991 through 2026. The combined collection contained 855,194 records at the time of the experiment.
-
-Version 1 requires detailed serve statistics for both players. Its regression targets are the realized proportions of service points won in the target match:
+## Data flow
 
 ```text
-player serve-point proportion
-    = (first-serve points won + second-serve points won)
-      / total service points played
+855,194 downloaded rows
+        |
+deduplication and invalid-match quarantine
+        |
+855,130 structurally retained matches
+        |
+historical feature construction
+        |
+259,407 matches with valid V1.1 serve targets
+        |
+181,632 train | 26,109 validation | 51,666 test
+        |
+V1.1 regression + scoring     V2.1 direct classification
+        \________________ paired test evaluation ________________/
 ```
 
-After requiring valid targets for both players, 259,423 matches remained:
+Rows with a missing surface are excluded before the final feature table, which is why some intermediate displays show 855,077 rows.
 
-| Partition | Matches | Approximate period |
-|---|---:|---|
-| Training | 181,596 | Through July 2022 |
-| Validation | 25,942 | July 2022 to July 2024 |
-| Test | 51,885 | July 2024 to June 2026 |
+## Saved test outputs
 
-The partitions were kept in chronological order. Model and ensemble selection used the training and validation periods, while the final period was reserved for out-of-sample evaluation.
+These values are recorded in the executed notebooks. They have not yet been independently regenerated from the private Drive artifacts in this repository revision.
 
-## Preliminary results
+| Approach | Accuracy | ROC-AUC | Brier score | Log loss |
+|---|---:|---:|---:|---:|
+| V1.1 regression plus Markov | 0.68904 | 0.75989 | 0.20671 | 0.63116 |
+| V2.1 equal classifier ensemble | 0.69047 | 0.76048 | 0.19887 | 0.58105 |
 
-The selected serve-probability model was an equal-weight ensemble of Ridge, LightGBM, XGBoost, and CatBoost regressors. Its average test MAE for the two serve targets was approximately `0.06715`.
+Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved metrics, but the accuracy and ROC-AUC differences are small.
 
-After propagation through the analytical scoring model, the preliminary test results were:
+## Repository contents
 
-| Metric | Result |
-|---|---:|
-| Accuracy | 0.6958 |
-| Log loss | 0.6156 |
-| Brier score | 0.2032 |
-| ROC-AUC | 0.7666 |
+- `notebooks/` - the five executed project notebooks in workflow order.
+- `models/` - the final checkpoints currently used by the notebooks.
+- `reproduction/` - lightweight notebook checks and an optional paired metric rerun.
+- `validation/scoring/` - an earlier standard-set formula validation with narrower scope than the final historical-rule implementation.
+- `docs/` - the correction package for Professor Neelesh S. Upadhye.
+- `notebook_guide.md` - notebook inputs, outputs and reading order.
+- `reproducibility_notes.md` - environment, data, runtime and evidence limitations.
 
-These results indicate predictive information beyond a constant 50-50 forecast. They do not establish state-of-the-art performance or superiority to every possible tennis-specific baseline.
+## Quick verification
 
-## Repository guide
+The notebook-level check uses only the Python standard library:
 
-The principal materials are intended to be read in this order:
+```bash
+python reproduction/check_package.py
+```
 
-1. `README.md` - project purpose, status, data provenance, and headline results.
-2. `docs/methodology.md` - targets, feature construction, modelling, analytical formulation, evaluation, assumptions, and future work.
-3. `docs/notebook_guide.md` - the purpose and expected reading order of the original notebooks.
-4. `docs/reproducibility_notes.md` - environment-specific dependencies, expected inputs and outputs, runtime considerations, and the level of reproducibility currently supported.
-5. `notebooks/` - original executed notebooks for the Version 1 workflow.
-6. `markov/` - early standalone analytical and Monte Carlo prototypes retained for methodological history.
+To recompute the paired metrics, place the three files listed in `reproduction/artifacts/README.md` in that directory and run:
 
-Version 2, which predicts the match winner directly as a classification target, is not part of the principal submission. It represents a separate modelling direction and is not required to understand the Version 1 ML-plus-scoring framework.
+```bash
+pip install -r reproduction/requirements.txt
+python reproduction/evaluate_predictions.py
+```
 
-## Interpreting the notebooks
+## Data source and licence
 
-The notebooks contain exploratory cells, saved Google Drive paths, model-development experiments, and preserved outputs. They are research records rather than polished library modules. Readers interested primarily in the final experiment should follow the file map in `docs/notebook_guide.md` instead of executing isolated cells out of order.
+The notebooks download historical men's tennis records from Jeff Sackmann's [`tennis_atp`](https://github.com/JeffSackmann/tennis_atp) repository. This repository does not redistribute the raw CSVs. Review the upstream terms before redistributing raw or processed records.
 
-The original notebook outputs have intentionally been retained. Full retraining can take several hours, and those outputs provide a record of the validation comparisons, test metrics, calibration analysis, interpretability work, ablation experiments, and error analyses produced during development.
+## Reproducibility claim
 
-## Main assumptions
-
-The analytical model assumes that:
-
-- each player's serve-point probability remains constant during a match;
-- point outcomes are conditionally independent given those probabilities;
-- the same set-winning probability can be propagated to the match level;
-- in-match injuries, weather changes, momentum, tactical adaptation, and changing fatigue are not modelled dynamically; and
-- the prediction uses only information intended to be available before the match.
-
-These assumptions make the framework interpretable and computationally tractable, but they also define the limits of the conclusions that can be drawn from it.
-
-## Planned extensions
-
-The next stages of the project are expected to include:
-
-- sensitivity and robustness analysis of how errors in the estimated serve probabilities affect match probabilities;
-- uncertainty-aware treatment of close matches, particularly predictions in the 40-60% range;
-- rolling or periodic retraining to measure how frequently the model benefits from new results;
-- additional calibration diagnostics and recalibration if justified;
-- comparison against practical ATP-ranking and Elo baselines; and
-- state-dependent serve probabilities and simulation-based extensions that relax the constant-probability assumption.
-
-A high-trial Monte Carlo implementation may also be used to check the analytical calculation under matching assumptions. Simulation noise itself is not expected to improve prediction quality; its value is in numerical validation, uncertainty propagation, and supporting models for which a convenient closed form is unavailable.
-
-## Attribution
-
-The underlying tennis records were compiled and maintained by [Jeff Sackmann](https://github.com/JeffSackmann). This project does not redistribute or claim ownership of that source data. Users should consult the upstream repository for its current files and usage terms.
+The repository supports inspection of the full methodology, verification of the saved notebook outputs, and metric recomputation when the compact saved prediction artifacts are supplied. A full from-scratch rerun is possible through the notebooks but is not one-command or bit-for-bit reproducible because the workflow uses Google Colab, Google Drive paths, a moving upstream dataset, GPU-dependent libraries and long tuning runs.
 

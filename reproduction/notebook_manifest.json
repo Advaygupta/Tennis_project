@@ -1,0 +1,26 @@
+{
+  "algorithm": "sha256",
+  "notebooks": {
+    "01_deduplication_feature_engineering.ipynb": {
+      "sha256": "985568eecea058e8ccb17f63cb721450b46f98aafa53bc24a05308e3e52af361",
+      "bytes": 426016
+    },
+    "02_v1_1_preprocessing.ipynb": {
+      "sha256": "af594d7a8ff440d3957458f4c9cd3740f7ce1800b8efc66f89e26add5aa5a929",
+      "bytes": 881278
+    },
+    "03_v1_1_model_training.ipynb": {
+      "sha256": "5f6b3a4a095617ddd22fb2c7fb9d81fe14581d2b431d0ba65dbafb5816c26f5d",
+      "bytes": 6235757
+    },
+    "04_v1_1_model_analysis.ipynb": {
+      "sha256": "05a6c96d6f57987468da3a783d6379b813213a0caaf9962632a501d030896e6b",
+      "bytes": 3555359
+    },
+    "05_v2_1_model_training.ipynb": {
+      "sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "bytes": 265309
+    }
+  }
+}
+

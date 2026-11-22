@@ -1,5 +1,7 @@
 # Standalone validation of the tennis scoring formula
 
+> Scope note: this folder validates the earlier standard-set formula with a seven-point tiebreak at 6-6. The current V1.1 notebook additionally implements historical deciding-set rules. Use this folder as a regression check for the shared standard-set calculation, not as validation of the complete historical rule mapping.
+
 ## Finding
 
 The notebook's scalar set formula and its best-of-three/best-of-five aggregation are consistent with an independent service-order-aware dynamic program under the scoring model specified below. Service-order carryover does not invalidate these expressions within that model. This is a mathematical/model-implementation finding, not validation of the trained probabilities or reported predictive performance.
