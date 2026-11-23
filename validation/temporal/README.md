@@ -1,5 +1,10 @@
 # Temporal audit: no training required
 
+The subsequent [real-data two-check report](real_data_results/report.md) records the
+completed sampled feature reconstruction and complete supplied-history consistency
+scan. Its aggregate evidence is in `real_data_results/`; its standalone runner is in
+`two_audit_runner/`. The initial `results/` directory remains the earlier audit snapshot.
+
 Run from the repository root with the existing reproduction dependencies:
 
 ```bash

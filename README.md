@@ -58,6 +58,12 @@ Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved me
 
 ## Quick verification
 
+The [real-data reconstruction and full-history report](validation/temporal/real_data_results/report.md)
+records the completed two-check run: all 36,960 values across 154 historical columns
+and 240 sampled matches matched, and the scan of 855,130 historical rows found no
+flagged event/identity inconsistencies. These results do not verify actual source
+availability. The runnable package is in `validation/temporal/two_audit_runner/`.
+
 The [temporal audit report](validation/temporal/report.md) documents the independent
 checks, a corrected V1.1 meta-CV date-identity bug, and unresolved source-availability
 assumptions. Run it without training:
@@ -66,9 +72,10 @@ assumptions. Run it without training:
 python validation/temporal/run_audit.py
 ```
 
-The audit covers 251 recorded predictor columns, 154 historical columns on synthetic
-data, and all available modeling metadata. Original feature matrices and real
-completion/publication evidence were unavailable, so source availability is **not
+The initial audit covers 251 recorded predictor columns, 154 historical columns on
+synthetic data, and the supplied modeling metadata. The later report linked above
+adds real-feature reconstruction and full-history consistency checks. Real
+completion/publication evidence remains unavailable, so source availability is **not
 independently verified**. The edited optional stacking cells have not been rerun;
 their saved displayed outputs predate the fix. Primary models/predictions are preserved.
 

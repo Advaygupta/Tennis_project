@@ -1,5 +1,10 @@
 # Temporal audit and changes — 23 November 2026
 
+> Initial inspection/audit snapshot. The later
+> [real-data two-check report](real_data_results/report.md) supersedes the pending
+> real-feature reconstruction and full-history consistency status below and records
+> the exact coverage of those subsequent checks.
+
 **No model retraining, tuning, calibration or inference was performed.** Saved models,
 prediction files, datasets and reported test metrics have been preserved. This is an
 audit of the professor's **first verification gate: temporal leakage**. It does not

@@ -1,0 +1,123 @@
+{
+  "scope": "Two focused feature-construction audits",
+  "started_at": "2026-11-23T05:27:16.763716+00:00",
+  "environment": {
+    "python": "3.13.14",
+    "pandas": "3.0.3",
+    "numpy": "2.4.3"
+  },
+  "model_fits": 0,
+  "original_files_modified": false,
+  "input_hashes": {
+    "matches_1991_to_2026_cleaned.csv": {
+      "sha256": "bc24c284aff0d9f89d315a5e9ab6675cb94ae9400af3bbed390730ba20c22a08",
+      "bytes": 238983412
+    },
+    "matches_1991_2026_features_added.csv": {
+      "sha256": "3f2326d9fc5c562d8a62f9d708221deceaa460bea6aadb7d124a4e64d1ba5ed1",
+      "bytes": 1399468379
+    }
+  },
+  "code_hashes": {
+    "feature_columns.json": "28901510423f06485524c578e26817e648b71f07663136ee2dbcf220692c8c56",
+    "independent_features.py": "8a6580152062a3d0ab04a59309c938a1864a38603d56609adb7d093f80839ab4",
+    "run_two_audits.py": "f0bbb67a294704f064846b6086befacedb9a4a9914e7fc7a1a60a58fa1452d9b"
+  },
+  "feature_reconstruction": {
+    "status": "completed",
+    "full_history_rows": 855130,
+    "saved_feature_rows": 855077,
+    "sampled_rows": 240,
+    "historical_feature_columns": 154,
+    "compared_values": 36960,
+    "matching_values": 36960,
+    "mismatching_values": 0,
+    "sampled_rows_with_mismatches": 0,
+    "years": [
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "surfaces": [
+      "Carpet",
+      "Clay",
+      "Grass",
+      "Hard"
+    ],
+    "tournament_levels": [
+      "15",
+      "25",
+      "A",
+      "C",
+      "D",
+      "F",
+      "G",
+      "M",
+      "O",
+      "S"
+    ],
+    "absolute_tolerance": 1e-06,
+    "relative_tolerance": 1e-07,
+    "interpretation": "Sampled arithmetic agreement under the existing ten-day reference-date policy; actual public availability is not established."
+  },
+  "full_history_consistency": {
+    "full_history_rows": 855130,
+    "rows_dropped": 0,
+    "identity_issue_rows": {
+      "missing_match_id": 0,
+      "duplicate_match_id": 0,
+      "invalid_reference_date": 0,
+      "missing_player_id": 0,
+      "same_player_both_sides": 0,
+      "invalid_outcome": 0,
+      "missing_source_identity": 0,
+      "duplicate_source_identity": 0
+    },
+    "reference_dates_sorted": true,
+    "distinct_recorded_event_ids": 27179,
+    "missing_event_id_rows": 0,
+    "event_ids_with_multiple_reference_dates": 0,
+    "event_ids_with_reference_span_at_least_10_days": 0,
+    "same_event_potentially_affected_query_rows": 0,
+    "same_event_identity_collision_rows": 0,
+    "cross_event_alias_candidate_rows": 0,
+    "interpretation": "Flags are candidates requiring inspection, not automatic proof of duplicate identity or actual temporal leakage.",
+    "reconstruction_input_valid": true,
+    "status": "completed"
+  },
+  "finished_at": "2026-11-23T05:29:29.112260+00:00"
+}

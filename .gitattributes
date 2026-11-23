@@ -1,0 +1,3 @@
+# Preserve the exact audited bytes, including each file's original line endings.
+validation/temporal/two_audit_runner/*.py -text
+validation/temporal/two_audit_runner/*.json -text

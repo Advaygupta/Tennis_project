@@ -54,8 +54,10 @@ For lightweight paired evaluation, only the three files in `reproduction/artifac
   stacking scores have been produced. The primary saved ensemble is unchanged.
 - Date-grouped splits, synthetic feature agreement and training-only outer preprocessing
   do not verify public source availability, training-label availability at evaluation
-  origins, or fully fold-local/nested inner CV. Real feature-value reconstruction is
-  pending the full historical input and feature export from the frozen run.
+  origins, or fully fold-local/nested inner CV. See the subsequent
+  `validation/temporal/real_data_results/report.md` for completed sampled real-feature
+  reconstruction and complete supplied-history consistency checks; these still do
+  not establish actual source availability.
 
 - Notebook hashes and displayed outputs can be verified immediately.
 - Headline numbers were independently recomputed from the supplied compact prediction artifacts; their hashes and aggregate metrics are committed under `reproduction/`.

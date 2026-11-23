@@ -1,0 +1,31 @@
+{
+  "review_date": "2026-11-23",
+  "submitted_by": "project author",
+  "public_archive_sha256": "79e10b42f12a9f91617921d06e939d862b20e3f03189c2d3a406c71094bd41b1",
+  "private_archive_sha256": "525cdfae7680296df80ae9cd652210d39f738cb7c0a7e792e6e52be0adfe1cdf",
+  "original_input_and_code_hashes": "See summary.json",
+  "code_hashes_match_published_runner": {
+    "feature_columns.json": true,
+    "independent_features.py": true,
+    "run_two_audits.py": true
+  },
+  "csv_values_match_summary": true,
+  "private_diagnostic_row_counts": {
+    "cross_event_alias_candidates.csv": 0,
+    "event_inventory.csv": 27179,
+    "feature_discrepancies.csv": 0,
+    "identity_issues.csv": 0,
+    "missing_event_identity.csv": 0,
+    "same_event_candidates.csv": 0,
+    "same_event_identity_collisions.csv": 0,
+    "sample_manifest.csv": 240
+  },
+  "maximum_reported_finite_absolute_difference": 4.547473508864641e-13,
+  "review_actions": [
+    "Validated submitted counts against per-feature CSV",
+    "Checked private diagnostic row counts against summary",
+    "Matched run code hashes against the published Python/JSON sources"
+  ],
+  "privacy": "Only aggregate output and hashes published; row-level diagnostics remain private",
+  "limitation": "The review did not rerun the 855130-row audit or authenticate real-world source availability"
+}
