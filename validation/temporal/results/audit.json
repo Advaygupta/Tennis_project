@@ -1,0 +1,138 @@
+{
+  "scope": "Temporal audit only; no training, tuning, calibration or model inference",
+  "baseline_commit": "7cfac7dceae6bbfb8f47184c6eb64af71d451156",
+  "remote_head_verified": false,
+  "feature_inventory": {
+    "predictor_columns": 251,
+    "historical_columns": 154,
+    "origin": "recorded notebook schema, not loaded saved feature matrix"
+  },
+  "synthetic": {
+    "rows": 64,
+    "independently_reconstructed_features": 154,
+    "compared_values": 9856,
+    "real_source_availability_verified": false
+  },
+  "tests": {
+    "run": 15,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "known_defects_reproduced": [
+      "T02 inconsistent-event dates",
+      "T01 synthetic multiweek future-result admission"
+    ]
+  },
+  "real_feature_comparison": {
+    "status": "blocked_missing_full_history_and_saved_features",
+    "compared_rows": 0
+  },
+  "provenance_contribution_audit": {
+    "status": "blocked_missing_timestamp_evidence_and_lineage",
+    "contributions_checked": 0
+  },
+  "saved_models_or_predictions_changed": [],
+  "feature_values_changed": 0,
+  "model_fits": 0,
+  "unresolved": [
+    "T01 public availability",
+    "T02 event exclusion in legacy feature generators",
+    "T03 inner-CV preprocessing",
+    "T05 non-nested base hyperparameter selection",
+    "T06 label availability at evaluation origins",
+    "T07 actual-date workload interpretation"
+  ],
+  "metadata": {
+    "rows": 259407,
+    "columns": 23,
+    "splits": {
+      "train": {
+        "rows": 181632,
+        "first": "1990-12-31",
+        "last": "2022-07-25"
+      },
+      "val": {
+        "rows": 26109,
+        "first": "2022-08-01",
+        "last": "2024-07-01"
+      },
+      "test": {
+        "rows": 51666,
+        "first": "2024-07-08",
+        "last": "2026-06-01"
+      }
+    },
+    "partition_checks": {
+      "reference_dates_exclusive": true,
+      "event_ids_exclusive": true,
+      "ordered_split_boundaries": true
+    },
+    "event_ids_with_multiple_reference_dates": 0,
+    "source_availability_rows_verified": 0,
+    "source_availability_rows_unresolved": 259407,
+    "source_availability_reason": "No per-observation completion/publication evidence supplied",
+    "dropped_rows": 0,
+    "oof_rows": 160707,
+    "legacy_meta_rows_with_wrong_dates": 160707,
+    "legacy_meta_folds": [
+      {
+        "train_rows": 28415,
+        "validation_rows": 25414,
+        "actual_train_end": "2006-08-28",
+        "actual_validation_start": "2006-08-28",
+        "shared_actual_reference_dates": 1
+      },
+      {
+        "train_rows": 53829,
+        "validation_rows": 41867,
+        "actual_train_end": "2011-09-26",
+        "actual_validation_start": "2011-09-26",
+        "shared_actual_reference_dates": 1
+      },
+      {
+        "train_rows": 95696,
+        "validation_rows": 65011,
+        "actual_train_end": "2016-06-06",
+        "actual_validation_start": "2016-06-06",
+        "shared_actual_reference_dates": 1
+      }
+    ],
+    "corrected_meta_folds": [
+      {
+        "train_rows": 23705,
+        "validation_rows": 29570,
+        "actual_train_end": "2005-02-14",
+        "actual_validation_start": "2005-02-21",
+        "shared_actual_reference_dates": 0
+      },
+      {
+        "train_rows": 53275,
+        "validation_rows": 45433,
+        "actual_train_end": "2011-09-05",
+        "actual_validation_start": "2011-09-12",
+        "shared_actual_reference_dates": 0
+      },
+      {
+        "train_rows": 98708,
+        "validation_rows": 61999,
+        "actual_train_end": "2016-08-22",
+        "actual_validation_start": "2016-08-29",
+        "shared_actual_reference_dates": 0
+      }
+    ],
+    "caveat": "Metadata is a target-eligible subset, not complete history; date checks do not prove label availability",
+    "sha256": "943813de874ded92c15d6542b7e4684b7a2b992ea1871bb99d152819533c989f"
+  },
+  "source_hashes": {
+    "notebooks/01_deduplication_feature_engineering.ipynb": "985568eecea058e8ccb17f63cb721450b46f98aafa53bc24a05308e3e52af361",
+    "notebooks/02_v1_1_preprocessing.ipynb": "af594d7a8ff440d3957458f4c9cd3740f7ce1800b8efc66f89e26add5aa5a929",
+    "notebooks/03_v1_1_model_training.ipynb": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+    "notebooks/04_v1_1_model_analysis.ipynb": "05a6c96d6f57987468da3a783d6379b813213a0caaf9962632a501d030896e6b",
+    "notebooks/05_v2_1_model_training.ipynb": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+    "validation/temporal/availability.py": "e9889fd4246ffda14aa1fc5a0162df8e8b669c1d4b390b8575bf1e6ab9818b3f",
+    "validation/temporal/notebook_adapter.py": "341d97acfa1edf44ed962fb304e63f209c977109820f252dfca1715630d9822e",
+    "validation/temporal/reference.py": "a6bec13c206c270420fb92446a2eba6abdc0a79c636c11fc060bf997967ce6e1",
+    "validation/temporal/run_audit.py": "4762e05533c6cca0fc5e2fd65b457809495ee5c70f6cafaa939261907de5412f",
+    "validation/temporal/test_temporal.py": "344a7e315daa75cfa95ce7ddc41ca6cbce7eff249c3473d9c5ddea69984178e9"
+  }
+}

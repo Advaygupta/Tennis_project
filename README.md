@@ -7,11 +7,11 @@ V1.1 predicts each player's serve-point win probability and passes those estimat
 ## Main corrections
 
 - Duplicate records are resolved before feature construction; ambiguous groups are retained in audit files.
-- Historical features use a 10-day eligibility lag and tournament-date batches, avoiding unsupported within-day match ordering.
+- Historical features use a 10-day reference-date eligibility lag and tournament-date batches. This avoids unsupported within-day ordering but does not establish actual result/publication availability.
 - Elo and other player histories are read before the current batch enters history.
 - Imputation and categorical encoding are fitted on training data only.
 - V1.1 uses an inverse-validation-MAE ensemble of Elastic Net, LightGBM, XGBoost and CatBoost.
-- The analytical model supports standard sets and historical Grand Slam deciding-set formats.
+- The analytical model implements standard sets and historical Grand Slam deciding-set formats; complete historical-rule verification remains a separate gate.
 - V2.1 reuses the V1.1 modeling sample and exact chronological partitions.
 
 ## Data flow
@@ -57,6 +57,20 @@ Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved me
 - `reproducibility_notes.md` - environment, data, runtime and evidence limitations.
 
 ## Quick verification
+
+The [temporal audit report](validation/temporal/report.md) documents the independent
+checks, a corrected V1.1 meta-CV date-identity bug, and unresolved source-availability
+assumptions. Run it without training:
+
+```bash
+python validation/temporal/run_audit.py
+```
+
+The audit covers 251 recorded predictor columns, 154 historical columns on synthetic
+data, and all available modeling metadata. Original feature matrices and real
+completion/publication evidence were unavailable, so source availability is **not
+independently verified**. The edited optional stacking cells have not been rerun;
+their saved displayed outputs predate the fix. Primary models/predictions are preserved.
 
 The notebook-level check uses only the Python standard library:
 

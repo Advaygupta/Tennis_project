@@ -1,0 +1,20 @@
+test_ambiguous_availability_and_provider_snapshot_are_unresolved (test_temporal.AvailabilityTests.test_ambiguous_availability_and_provider_snapshot_are_unresolved) ... ok
+test_overlap_and_multiweek_completion_are_not_released (test_temporal.AvailabilityTests.test_overlap_and_multiweek_completion_are_not_released) ... ok
+test_rejects_invalid_dates_and_bounds (test_temporal.AvailabilityTests.test_rejects_invalid_dates_and_bounds) ... ok
+test_result_proof_does_not_prove_statistics_or_rankings (test_temporal.AvailabilityTests.test_result_proof_does_not_prove_statistics_or_rankings) ... ok
+test_same_match_event_and_unknown_event_excluded (test_temporal.AvailabilityTests.test_same_match_event_and_unknown_event_excluded) ... ok
+test_verified_availability_inclusive_cutoff (test_temporal.AvailabilityTests.test_verified_availability_inclusive_cutoff) ... ok
+test_original_cv_definitions_separate_true_dates (test_temporal.EvaluationTests.test_original_cv_definitions_separate_true_dates) ... ok
+test_ridge_meta_dates_pass_explicit_original_oof_identity (test_temporal.EvaluationTests.test_ridge_meta_dates_pass_explicit_original_oof_identity) ... ok
+test_ambiguous_date_permutation (test_temporal.ReconstructionTests.test_ambiguous_date_permutation) ... ok
+test_cutoff_inclusive_and_strict_window_boundaries (test_temporal.ReconstructionTests.test_cutoff_inclusive_and_strict_window_boundaries) ... ok
+test_future_mutation_does_not_change_earlier_features (test_temporal.ReconstructionTests.test_future_mutation_does_not_change_earlier_features) ... ok
+test_independent_reference_all_history_columns (test_temporal.ReconstructionTests.test_independent_reference_all_history_columns) ... ok
+test_legacy_elo_and_rolling_accept_a_synthetically_future_result (test_temporal.ReconstructionTests.test_legacy_elo_and_rolling_accept_a_synthetically_future_result) ... ok
+test_own_result_and_statistics_do_not_change_own_features (test_temporal.ReconstructionTests.test_own_result_and_statistics_do_not_change_own_features) ... ok
+test_reproduces_same_event_with_inconsistent_dates_defect (test_temporal.ReconstructionTests.test_reproduces_same_event_with_inconsistent_dates_defect) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 6.782s
+
+OK

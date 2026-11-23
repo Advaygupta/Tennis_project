@@ -1,5 +1,12 @@
 # Reproduction package
 
+## Temporal audit without training
+
+Run `python validation/temporal/run_audit.py` from the repository root. See
+[`validation/temporal/report.md`](../validation/temporal/report.md) for the date-identity
+correction, measured verification coverage and unresolved source-availability evidence.
+This does not execute notebook workflows or update saved model/prediction artifacts.
+
 ## Verify the committed notebooks
 
 ```bash

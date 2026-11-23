@@ -20,4 +20,6 @@ venv/
 *.cache
 shap_values/
 .repro_deps/
+validation/temporal/results/real_feature_discrepancies.csv
+validation/temporal/results/contribution_decisions.csv
 

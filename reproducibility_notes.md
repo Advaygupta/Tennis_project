@@ -46,6 +46,17 @@ For lightweight paired evaluation, only the three files in `reproduction/artifac
 
 ## Evidence distinctions
 
+- `python validation/temporal/run_audit.py` runs the temporal audit without training,
+  tuning or inference. Its report is `validation/temporal/report.md`; measured counts,
+  source hashes and limitations are in `validation/temporal/results/audit.json`.
+- The V1.1 stacking source now passes original OOF dates explicitly. Existing notebook
+  outputs predate that fix and were retained as historical evidence. No corrected
+  stacking scores have been produced. The primary saved ensemble is unchanged.
+- Date-grouped splits, synthetic feature agreement and training-only outer preprocessing
+  do not verify public source availability, training-label availability at evaluation
+  origins, or fully fold-local/nested inner CV. Real feature-value reconstruction is
+  pending the full historical input and feature export from the frozen run.
+
 - Notebook hashes and displayed outputs can be verified immediately.
 - Headline numbers were independently recomputed from the supplied compact prediction artifacts; their hashes and aggregate metrics are committed under `reproduction/`.
 - `validation/scoring/` validates the earlier standard 6-6 seven-point-tiebreak formula, not the complete historical deciding-set mapping.

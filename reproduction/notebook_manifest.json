@@ -10,8 +10,8 @@
       "bytes": 881278
     },
     "03_v1_1_model_training.ipynb": {
-      "sha256": "5f6b3a4a095617ddd22fb2c7fb9d81fe14581d2b431d0ba65dbafb5816c26f5d",
-      "bytes": 6235757
+      "sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "bytes": 6236720
     },
     "04_v1_1_model_analysis.ipynb": {
       "sha256": "05a6c96d6f57987468da3a783d6379b813213a0caaf9962632a501d030896e6b",
@@ -23,4 +23,3 @@
     }
   }
 }
-
