@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "baseline_commit": "65e1b58811ebeb44e1be513590a7009a1dd37b91",
+  "inputs": {
+    "reproduction\\artifacts\\v1_1_results.joblib": "ed2982fda03f9c3735b6694040451f29f833f5a305a05ab854a8fe2fb5b75912",
+    "reproduction\\artifacts\\v2_1_test_match_probabilities.parquet": "1342c40da095d4551cd6f0a89f0981fb294b33c0a069f8df734faef1ab01a021",
+    "reproduction\\artifacts\\matches_v1_1_metadata.csv": "943813de874ded92c15d6542b7e4684b7a2b992ea1871bb99d152819533c989f",
+    "validation\\scoring\\historical\\audit_private\\saved_probability_comparison.csv": "f8f6d5008042ece8184effe841f55e138db04c71e730f3544f642145e3283eef"
+  },
+  "preserved_inputs": true,
+  "code": {
+    "alignment.py": "516460b6ec87e4dfdb89effdeda5455b7b5e0ad4fad583cbb0692bfb8ba07041",
+    "diagnostics.py": "9a482d3f34da9c11d8682228e8acd7acd6f4b5ff0a7a00b74d6ca5e243a183e2",
+    "inventory.py": "91bebdcf5f4e0f76e70d1bed1ea56543c13b78ce277155588eb92d4f31039891",
+    "metrics.py": "acaf422e9bbad6d2f484c53736a5097f41acc334a51be04a38236172dd6c59c9",
+    "paired_bootstrap.py": "d009ab31fc1263f7e28487517dca8679ea62b013626ddc741d0fc6693c86c198",
+    "run_audit.py": "44601e33cf4623c03ab521f7c387a7bbfa61992372b4ba70a021c7cf6a586436",
+    "test_evaluation.py": "02cdb0da77551bc13327d1d6f69db319fbfe0c9b68fabd3bc303943ee9c3809d"
+  },
+  "output": {
+    "comparison.csv": "d4f2de2fa98516366d082efd64c81373a23f7fc975db87c6871aed4b5351eecd",
+    "inventory.json": "db6eab510b6d644937e89a585737031cbe80f953369f2e3d6f07e5d4f630f85c",
+    "summary.json": "a7490d771703773ee342ddc2124e71c5e9b31472ba0fb5d54aaf772bf5bc235b"
+  },
+  "invocation": {
+    "replicates": 5000,
+    "seed": 20261123
+  },
+  "note": "This manifest excludes itself and later reviewer prose/test receipts. Private row-level output deliberately excluded. Hashes identify artifacts, not correctness or ownership."
+}

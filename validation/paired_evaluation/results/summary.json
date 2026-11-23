@@ -1,0 +1,1931 @@
+{
+  "status": "Completed frozen-artifact audit; full pairing conditional on V1 ordering",
+  "baseline_commit": "65e1b58811ebeb44e1be513590a7009a1dd37b91",
+  "A": "V2.1 equal classifier ensemble",
+  "B": "V1.1 regression plus Markov",
+  "delta": "A minus B; positive favours A for accuracy/AUC, negative favours A for Brier/log loss",
+  "alignment": {
+    "original_counts": {
+      "V1": 51666,
+      "V2": 51666,
+      "metadata": 259407
+    },
+    "test_metadata": 51666,
+    "matched_pairs": 51666,
+    "unmatched": 0,
+    "V2_exact_row_and_match_id": 51666,
+    "V1_exact_match_id": 0,
+    "V1_unique_shared_context": 35,
+    "V1_ambiguous_positional": 51631,
+    "V1_ambiguous_context_groups": 2766,
+    "context_key": [
+      "tourney_name",
+      "tourney_date",
+      "best_of",
+      "playerA_wins"
+    ],
+    "full_population_excluded": 0,
+    "unique_context_excluded": 51631,
+    "limitation": "V1 has no player IDs or stable match IDs. Unique shared context is corroboration within this frozen population, not independently authenticated player identity. Full-population pairing is conditional on preserved V1 ordering.",
+    "events_spanning_multiple_reference_dates": 0,
+    "events": 1407,
+    "test_date_range": [
+      "2024-07-08",
+      "2026-06-01"
+    ]
+  },
+  "reproduction_errors": {
+    "v1_1": {
+      "accuracy": 0.0,
+      "roc_auc": 0.0,
+      "brier_score": 3.247402347028583e-15,
+      "log_loss": 3.3306690738754696e-15
+    },
+    "v2_1": {
+      "accuracy": 0.0,
+      "roc_auc": 0.0,
+      "brier_score": -1.27675647831893e-15,
+      "log_loss": -2.6645352591003757e-15
+    }
+  },
+  "populations": {
+    "full_original_conditional": {
+      "n": 51666,
+      "A": {
+        "accuracy": 0.6904734254635544,
+        "roc_auc": 0.7604806870433078,
+        "brier_score": 0.1988745450533902,
+        "log_loss": 0.5810487173030333
+      },
+      "B": {
+        "accuracy": 0.6890411489180506,
+        "roc_auc": 0.7598884003716795,
+        "brier_score": 0.20670643128582403,
+        "log_loss": 0.6311599058905453
+      },
+      "bootstrap": {
+        "match": {
+          "replicates": 5000,
+          "seed": 20261123,
+          "n": 51666,
+          "resampling_units": 51666,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0014322765455038189,
+              "ci95": [
+                -0.00015484070762203383,
+                0.0031548794177989393
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.0001935508845275423,
+                  0.003116169240893431
+                ],
+                [
+                  -9.677544226377115e-05,
+                  0.0031548794177989393
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0005922866716283615,
+              "ci95": [
+                2.1411390059369873e-05,
+                0.0011792973729816325
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  3.922920036486547e-06,
+                  0.001174458986474992
+                ],
+                [
+                  2.8512532665189718e-05,
+                  0.0011801286196110158
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.007831886232433832,
+              "ci95": [
+                -0.008467331774100362,
+                -0.007213421068450016
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.00848197559893624,
+                  -0.0071924851653489205
+                ],
+                [
+                  -0.00845489981951116,
+                  -0.007223231854902111
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.05011118858751196,
+              "ci95": [
+                -0.05351760369238436,
+                -0.04681243966106631
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.0535195703648144,
+                  -0.04685761584214963
+                ],
+                [
+                  -0.05350934911519867,
+                  -0.046691278741914255
+                ]
+              ]
+            }
+          }
+        },
+        "event": {
+          "replicates": 5000,
+          "seed": 20261124,
+          "n": 51666,
+          "resampling_units": 1407,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0014322765455038189,
+              "ci95": [
+                -0.0002137444706762096,
+                0.0031075978892677464
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.00023949838055938998,
+                  0.0030969907648083815
+                ],
+                [
+                  -0.00017613965254784924,
+                  0.0031394799623854102
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0005922866716283615,
+              "ci95": [
+                -4.480111236760952e-05,
+                0.0012307037344595228
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -4.3069189634545314e-05,
+                  0.0012400882596991076
+                ],
+                [
+                  -5.488410186073044e-05,
+                  0.00122010302760667
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.007831886232433832,
+              "ci95": [
+                -0.008523105892054529,
+                -0.007133345390934514
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.008538194794065387,
+                  -0.00712882945667527
+                ],
+                [
+                  -0.008506916793790427,
+                  -0.007142466808591457
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.05011118858751196,
+              "ci95": [
+                -0.05421161124706387,
+                -0.04600165978078817
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.05414431433596118,
+                  -0.046055416331993664
+                ],
+                [
+                  -0.05426408078545746,
+                  -0.04595670658290257
+                ]
+              ]
+            }
+          }
+        },
+        "calendar_28d": {
+          "replicates": 5000,
+          "seed": 20261125,
+          "n": 51666,
+          "resampling_units": 25,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0014322765455038189,
+              "ci95": [
+                -0.00014572498441697322,
+                0.002974904171713675
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.00016648492343646,
+                  0.002915495775499956
+                ],
+                [
+                  -0.000115708385473928,
+                  0.002996755912691292
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0005922866716283615,
+              "ci95": [
+                -3.0890119781704064e-05,
+                0.0011725047371831914
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -2.773464994224872e-05,
+                  0.0011720211703648066
+                ],
+                [
+                  -3.65198592886945e-05,
+                  0.0011711544912267864
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.007831886232433832,
+              "ci95": [
+                -0.008596354552112767,
+                -0.006999208426256146
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.008569553595906674,
+                  -0.006984533327173612
+                ],
+                [
+                  -0.008605155115144867,
+                  -0.007022598927191331
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.05011118858751196,
+              "ci95": [
+                -0.05595456057228193,
+                -0.04406505624587898
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.05595286860905919,
+                  -0.04404748063659571
+                ],
+                [
+                  -0.05593927426124412,
+                  -0.044077661009716496
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "unique_shared_context": {
+      "n": 35,
+      "A": {
+        "accuracy": 0.5428571428571428,
+        "roc_auc": 0.74,
+        "brier_score": 0.22182186812145038,
+        "log_loss": 0.6207518903485865
+      },
+      "B": {
+        "accuracy": 0.5142857142857142,
+        "roc_auc": 0.7266666666666667,
+        "brier_score": 0.2433622899582462,
+        "log_loss": 0.6646985425127468
+      },
+      "bootstrap": {
+        "match": {
+          "replicates": 5000,
+          "seed": 20261133,
+          "n": 35,
+          "resampling_units": 35,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.02857142857142858,
+              "ci95": [
+                0.0,
+                0.08571428571428572
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  0.0,
+                  0.08571428571428572
+                ],
+                [
+                  0.0,
+                  0.08571428571428572
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.013333333333333308,
+              "ci95": [
+                -0.03623188405797095,
+                0.0688405797101449
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.03846153846153849,
+                  0.06666666666666665
+                ],
+                [
+                  -0.03594771241830064,
+                  0.06996678321678318
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.021540421836795803,
+              "ci95": [
+                -0.043635406440663084,
+                -0.0015228089989317037
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.042529141735649416,
+                  -0.0014067296287966135
+                ],
+                [
+                  -0.044258266860646066,
+                  -0.0018069641088394488
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.04394665216416038,
+              "ci95": [
+                -0.11419153282118055,
+                0.013238522918904577
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.10967299492769944,
+                  0.013439701089385572
+                ],
+                [
+                  -0.11623725519424005,
+                  0.012733118310209717
+                ]
+              ]
+            }
+          }
+        },
+        "event": {
+          "replicates": 5000,
+          "seed": 20261134,
+          "n": 35,
+          "resampling_units": 25,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.02857142857142858,
+              "ci95": [
+                0.0,
+                0.08823529411764706
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  0.0,
+                  0.08823529411764706
+                ],
+                [
+                  0.0,
+                  0.08823529411764706
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.013333333333333308,
+              "ci95": [
+                -0.03461805555555554,
+                0.07894736842105254
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.03598602484472046,
+                  0.07999999999999996
+                ],
+                [
+                  -0.033159340659340654,
+                  0.07706477732793524
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.021540421836795803,
+              "ci95": [
+                -0.04318505690258608,
+                -0.0020092128522781662
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.04410144205488116,
+                  -0.0017531433232446684
+                ],
+                [
+                  -0.04304902244288888,
+                  -0.002290094263488697
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.04394665216416038,
+              "ci95": [
+                -0.11466059881650563,
+                0.014101014823720075
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.11421367756099746,
+                  0.014450156728462043
+                ],
+                [
+                  -0.11509822741889457,
+                  0.01316736310581826
+                ]
+              ]
+            }
+          }
+        },
+        "calendar_28d": {
+          "replicates": 5000,
+          "seed": 20261135,
+          "n": 35,
+          "resampling_units": 5,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.02857142857142858,
+              "ci95": [
+                0.0,
+                0.036585365853658534
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  0.0,
+                  0.036585365853658534
+                ],
+                [
+                  0.0,
+                  0.036585365853658534
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.013333333333333308,
+              "ci95": [
+                -0.14814814814814814,
+                0.03819444444444453
+              ],
+              "valid_replicates": 4997,
+              "undefined_replicates": 3,
+              "half_run_ci95": [
+                [
+                  -0.14814814814814814,
+                  0.03819444444444453
+                ],
+                [
+                  -0.14814814814814814,
+                  0.03819444444444453
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.021540421836795803,
+              "ci95": [
+                -0.06777929071101046,
+                -0.00892736723513679
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.06777929071101046,
+                  -0.00892736723513679
+                ],
+                [
+                  -0.06777929071101046,
+                  -0.009007429740425446
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.04394665216416038,
+              "ci95": [
+                -0.15230911010386447,
+                -0.012921421406540907
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.15230911010386447,
+                  -0.012921421406540907
+                ],
+                [
+                  -0.15230911010386447,
+                  -0.012976575431453837
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "excluded_from_full": 51631
+    },
+    "completed": {
+      "n": 50213,
+      "A": {
+        "accuracy": 0.6949793878079382,
+        "roc_auc": 0.7661872723821714,
+        "brier_score": 0.19658968369763832,
+        "log_loss": 0.5754581110907164
+      },
+      "B": {
+        "accuracy": 0.6937446478003704,
+        "roc_auc": 0.7656354862488952,
+        "brier_score": 0.20372409355925392,
+        "log_loss": 0.6217581316873743
+      },
+      "bootstrap": {
+        "event": {
+          "replicates": 5000,
+          "seed": 20261143,
+          "n": 50213,
+          "resampling_units": 1407,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0012347400075678472,
+              "ci95": [
+                -0.0004244635359826408,
+                0.0029589044499411955
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.0004033782254807302,
+                  0.002948104855376362
+                ],
+                [
+                  -0.0004756124035382584,
+                  0.0029612516058951923
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.000551786133276222,
+              "ci95": [
+                -6.862727168155391e-05,
+                0.001173777719365307
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -6.1010165612029875e-05,
+                  0.0011808972279670927
+                ],
+                [
+                  -7.555343803072045e-05,
+                  0.0011694802199386485
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.007134409861615593,
+              "ci95": [
+                -0.007833039928477904,
+                -0.006443977265461727
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.007816036666295705,
+                  -0.00643426111773782
+                ],
+                [
+                  -0.007837015223232562,
+                  -0.006454945127450106
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.04630002059665783,
+              "ci95": [
+                -0.05040807752393689,
+                -0.04217013517765817
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.05036832306100622,
+                  -0.04220606727357808
+                ],
+                [
+                  -0.0504395016151408,
+                  -0.042160406123741834
+                ]
+              ]
+            }
+          }
+        },
+        "calendar_28d": {
+          "replicates": 5000,
+          "seed": 20261144,
+          "n": 50213,
+          "resampling_units": 25,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0012347400075678472,
+              "ci95": [
+                -0.0001642243327627618,
+                0.0027134206470015216
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.00016777479226242102,
+                  0.0027067330193219366
+                ],
+                [
+                  -0.00015264095726091884,
+                  0.00271760022830124
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.000551786133276222,
+              "ci95": [
+                -5.978193097167238e-05,
+                0.0011359307080345963
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -6.035513917263257e-05,
+                  0.0011389606245806123
+                ],
+                [
+                  -5.697063809911862e-05,
+                  0.001127772755323423
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.007134409861615593,
+              "ci95": [
+                -0.007895269742970562,
+                -0.006300591093451196
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.0078979395516525,
+                  -0.006307560433684338
+                ],
+                [
+                  -0.007891582231802407,
+                  -0.006297883022923121
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.04630002059665783,
+              "ci95": [
+                -0.05230137829386163,
+                -0.04000316940745988
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.05231700450733647,
+                  -0.04005272951985658
+                ],
+                [
+                  -0.05225353025928681,
+                  -0.039983517786062885
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "excluded_from_full": 1453
+    },
+    "supported_policy": {
+      "n": 34367,
+      "A": {
+        "accuracy": 0.6771030348881194,
+        "roc_auc": 0.7431938381837295,
+        "brier_score": 0.20516615861690213,
+        "log_loss": 0.5956104941449851
+      },
+      "B": {
+        "accuracy": 0.6749789041813368,
+        "roc_auc": 0.7424189197039546,
+        "brier_score": 0.21146546512846393,
+        "log_loss": 0.6318650512522043
+      },
+      "bootstrap": {
+        "event": {
+          "replicates": 5000,
+          "seed": 20261153,
+          "n": 34367,
+          "resampling_units": 814,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0021241307067826343,
+              "ci95": [
+                0.0,
+                0.004241699293893129
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  5.798881609693055e-05,
+                  0.004246753776239263
+                ],
+                [
+                  0.0,
+                  0.004238177113107973
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0007749184797749553,
+              "ci95": [
+                -2.9714830356006275e-05,
+                0.0016106181391174867
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -2.276744966463462e-05,
+                  0.0015992152477959376
+                ],
+                [
+                  -3.520822281926627e-05,
+                  0.0016205826911232597
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.0062993065115617974,
+              "ci95": [
+                -0.007123287431819408,
+                -0.005501726819041913
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.007144612269723341,
+                  -0.0055102116623678525
+                ],
+                [
+                  -0.007110673661664902,
+                  -0.005501431696437646
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.03625455710721914,
+              "ci95": [
+                -0.040705966975865746,
+                -0.03211705031853071
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.040774764058768856,
+                  -0.032103006697319345
+                ],
+                [
+                  -0.040597946366701144,
+                  -0.032148449873685876
+                ]
+              ]
+            }
+          }
+        },
+        "calendar_28d": {
+          "replicates": 5000,
+          "seed": 20261154,
+          "n": 34367,
+          "resampling_units": 25,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0021241307067826343,
+              "ci95": [
+                0.00016286989357289312,
+                0.003934298361150533
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  0.000128971619040987,
+                  0.003918909006487173
+                ],
+                [
+                  0.00020909331922430773,
+                  0.003970068397017793
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0007749184797749553,
+              "ci95": [
+                1.3930230276207325e-05,
+                0.0014533590309075354
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -6.545814612068927e-07,
+                  0.0014329921638906202
+                ],
+                [
+                  2.9449637670567187e-05,
+                  0.0014711582391698924
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.0062993065115617974,
+              "ci95": [
+                -0.0071337654235557775,
+                -0.005565522726198142
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.0071190815844599025,
+                  -0.005556985761771014
+                ],
+                [
+                  -0.007141790383291424,
+                  -0.0055761503016892805
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.03625455710721914,
+              "ci95": [
+                -0.04359167678103259,
+                -0.029795921892314697
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.04370094955929346,
+                  -0.02963250430663205
+                ],
+                [
+                  -0.043539724342251084,
+                  -0.029863034994725528
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "excluded_from_full": 17299
+    },
+    "completed_supported_policy": {
+      "n": 33294,
+      "A": {
+        "accuracy": 0.6820448128791975,
+        "roc_auc": 0.7496547284207217,
+        "brier_score": 0.2027689183933367,
+        "log_loss": 0.5898183782315567
+      },
+      "B": {
+        "accuracy": 0.6801525800444524,
+        "roc_auc": 0.7489403349742532,
+        "brier_score": 0.208314119392914,
+        "log_loss": 0.6223554504581958
+      },
+      "bootstrap": {
+        "event": {
+          "replicates": 5000,
+          "seed": 20261163,
+          "n": 33294,
+          "resampling_units": 814,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0018922328347450446,
+              "ci95": [
+                -0.00017776925293998624,
+                0.00408847194709579
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.00017911143524522688,
+                  0.004105666313145438
+                ],
+                [
+                  -0.0001769512264951407,
+                  0.004005598899580844
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0007143934464685087,
+              "ci95": [
+                -0.00010852542184786318,
+                0.0015203830532802885
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.00012121572804792147,
+                  0.0014842516237811442
+                ],
+                [
+                  -9.503638591375763e-05,
+                  0.0015473327426401907
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.00554520099957731,
+              "ci95": [
+                -0.006366048149656852,
+                -0.0047556778055675795
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.006382466205638789,
+                  -0.004755080405538224
+                ],
+                [
+                  -0.0063556888883125875,
+                  -0.004756454531872468
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.03253707222663915,
+              "ci95": [
+                -0.03701770558959001,
+                -0.028364829141222382
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.036882018134355175,
+                  -0.02851351624428763
+                ],
+                [
+                  -0.037237012221375494,
+                  -0.028232322813004532
+                ]
+              ]
+            }
+          }
+        },
+        "calendar_28d": {
+          "replicates": 5000,
+          "seed": 20261164,
+          "n": 33294,
+          "resampling_units": 25,
+          "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+          "interval_level": 0.95,
+          "metrics": {
+            "accuracy": {
+              "observed": 0.0018922328347450446,
+              "ci95": [
+                9.500537404166123e-05,
+                0.0036480888628252135
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  9.718975854584232e-05,
+                  0.0036684403357894737
+                ],
+                [
+                  9.026830819982637e-05,
+                  0.003623421441227504
+                ]
+              ]
+            },
+            "roc_auc": {
+              "observed": 0.0007143934464685087,
+              "ci95": [
+                -6.0002463952923964e-05,
+                0.0013712922106654164
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -4.1337764197718616e-05,
+                  0.0013527472595554705
+                ],
+                [
+                  -6.658672662851473e-05,
+                  0.0013866524468533065
+                ]
+              ]
+            },
+            "brier_score": {
+              "observed": -0.00554520099957731,
+              "ci95": [
+                -0.006352646729295157,
+                -0.004805631090552437
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.0063481250353758,
+                  -0.004823419160092065
+                ],
+                [
+                  -0.006358613633874651,
+                  -0.004776354662146316
+                ]
+              ]
+            },
+            "log_loss": {
+              "observed": -0.03253707222663915,
+              "ci95": [
+                -0.03977918617334683,
+                -0.025833091413482244
+              ],
+              "valid_replicates": 5000,
+              "undefined_replicates": 0,
+              "half_run_ci95": [
+                [
+                  -0.03963594365947901,
+                  -0.025858753270176074
+                ],
+                [
+                  -0.03999539094928781,
+                  -0.025795242069945497
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "excluded_from_full": 18372
+    }
+  },
+  "scoring_only_sensitivity": {
+    "n": 51666,
+    "A": {
+      "accuracy": 0.6890411489180506,
+      "roc_auc": 0.759908439278689,
+      "brier_score": 0.2066894364971308,
+      "log_loss": 0.6311056686517504
+    },
+    "B": {
+      "accuracy": 0.6890411489180506,
+      "roc_auc": 0.7598884003716795,
+      "brier_score": 0.20670643128582403,
+      "log_loss": 0.6311599058905453
+    },
+    "bootstrap": {
+      "match": {
+        "replicates": 5000,
+        "seed": 20261223,
+        "n": 51666,
+        "resampling_units": 51666,
+        "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+        "interval_level": 0.95,
+        "metrics": {
+          "accuracy": {
+            "observed": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "roc_auc": {
+            "observed": 2.0038907009523044e-05,
+            "ci95": [
+              2.5114612725307804e-07,
+              4.198014490952306e-05
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -1.242752441787952e-07,
+                4.198266159188557e-05
+              ],
+              [
+                4.206633685915896e-07,
+                4.1933227151980114e-05
+              ]
+            ]
+          },
+          "brier_score": {
+            "observed": -1.6994788693214247e-05,
+            "ci95": [
+              -3.038088047831114e-05,
+              -5.371624965305743e-06
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -3.0464526494869937e-05,
+                -5.0059748423462315e-06
+              ],
+              [
+                -3.037290801652075e-05,
+                -5.6366248183056014e-06
+              ]
+            ]
+          },
+          "log_loss": {
+            "observed": -5.423723879482978e-05,
+            "ci95": [
+              -0.0001019929291362002,
+              -1.4572006357427697e-05
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -0.0001024478084945852,
+                -1.3744362954274777e-05
+              ],
+              [
+                -0.00010149749348015769,
+                -1.6008376395134265e-05
+              ]
+            ]
+          }
+        }
+      },
+      "event": {
+        "replicates": 5000,
+        "seed": 20261224,
+        "n": 51666,
+        "resampling_units": 1407,
+        "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+        "interval_level": 0.95,
+        "metrics": {
+          "accuracy": {
+            "observed": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "roc_auc": {
+            "observed": 2.0038907009523044e-05,
+            "ci95": [
+              -8.745690480210789e-06,
+              6.732356939702082e-05
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -8.573045661502964e-06,
+                6.701670656426297e-05
+              ],
+              [
+                -8.992550703518231e-06,
+                6.772407916501022e-05
+              ]
+            ]
+          },
+          "brier_score": {
+            "observed": -1.6994788693214247e-05,
+            "ci95": [
+              -4.7032498635085146e-05,
+              1.3228766156384602e-07
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -4.6685285221181564e-05,
+                1.3144205652540542e-07
+              ],
+              [
+                -4.7362670437101674e-05,
+                1.3270279434423537e-07
+              ]
+            ]
+          },
+          "log_loss": {
+            "observed": -5.423723879482978e-05,
+            "ci95": [
+              -0.00014401339588584675,
+              -3.090510463101054e-06
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -0.0001420979640731471,
+                -3.0966730184198214e-06
+              ],
+              [
+                -0.00014536031362006284,
+                -3.0856365069311914e-06
+              ]
+            ]
+          }
+        }
+      },
+      "calendar_28d": {
+        "replicates": 5000,
+        "seed": 20261225,
+        "n": 51666,
+        "resampling_units": 25,
+        "method": "paired multinomial pairs/whole-cluster bootstrap; percentile interval",
+        "interval_level": 0.95,
+        "metrics": {
+          "accuracy": {
+            "observed": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "roc_auc": {
+            "observed": 2.0038907009523044e-05,
+            "ci95": [
+              -8.374516232093065e-06,
+              7.578036696203604e-05
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -8.525287535166015e-06,
+                7.557078051347035e-05
+              ],
+              [
+                -8.28969761139109e-06,
+                7.628652585209283e-05
+              ]
+            ]
+          },
+          "brier_score": {
+            "observed": -1.6994788693214247e-05,
+            "ci95": [
+              -5.330673690618712e-05,
+              1.2049066101437844e-07
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -5.299637809288929e-05,
+                1.1523187227391944e-07
+              ],
+              [
+                -5.375963948741066e-05,
+                1.2263877504648426e-07
+              ]
+            ]
+          },
+          "log_loss": {
+            "observed": -5.423723879482978e-05,
+            "ci95": [
+              -0.00016370221278791836,
+              -3.061445723176311e-06
+            ],
+            "valid_replicates": 5000,
+            "undefined_replicates": 0,
+            "half_run_ci95": [
+              [
+                -0.0001616892856934314,
+                -2.9731152937831746e-06
+              ],
+              [
+                -0.0001665273767194942,
+                -3.2308053941958784e-06
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "A_identity": "V1 frozen p/q with 48 confirmed event rule corrections",
+    "B_identity": "Original saved V1",
+    "changed_rows": 48,
+    "best_of_conflicts_excluded_from_correction": 4
+  },
+  "ancillary_V2_metrics_exploratory": {
+    "match_win_probA": {
+      "accuracy": 0.6904734254635544,
+      "roc_auc": 0.7604806870433078,
+      "brier_score": 0.1988745450533902,
+      "log_loss": 0.5810487173030333
+    },
+    "catboost_probA": {
+      "accuracy": 0.6904347152866489,
+      "roc_auc": 0.7600367784975947,
+      "brier_score": 0.1990593455362659,
+      "log_loss": 0.5813929449764298
+    },
+    "lightgbm_probA": {
+      "accuracy": 0.6889443734757867,
+      "roc_auc": 0.7600920997876907,
+      "brier_score": 0.1994150014555265,
+      "log_loss": 0.5830885432388625
+    },
+    "xgboost_probA": {
+      "accuracy": 0.6894863159524639,
+      "roc_auc": 0.7605011822655421,
+      "brier_score": 0.19888659743702883,
+      "log_loss": 0.5811449115702981
+    },
+    "sgd_probA": {
+      "accuracy": 0.6853636821120273,
+      "roc_auc": 0.75630162708492,
+      "brier_score": 0.20042416798218168,
+      "log_loss": 0.5848051870514289
+    },
+    "stacked_probA": {
+      "accuracy": 0.6900282584291411,
+      "roc_auc": 0.7603675208675874,
+      "brier_score": 0.19938603164439023,
+      "log_loss": 0.5824924854167474
+    }
+  },
+  "diagnostics": {
+    "discordance": {
+      "both_correct": 34711,
+      "both_wrong": 15103,
+      "A_only_correct": 963,
+      "B_only_correct": 889,
+      "discordant": 1852,
+      "mcnemar_exact_two_sided_p": 0.08980216946242581,
+      "null": "Equal marginal accuracy; discordant directions equiprobable",
+      "assumption": "Independent match pairs; descriptive reference only under tennis dependence"
+    },
+    "absolute_probability_difference": {
+      "min": 9.675054519764359e-07,
+      "p01": 0.0018618037886616338,
+      "p05": 0.009189107080451286,
+      "p25": 0.04229984115614957,
+      "median": 0.0727187004508672,
+      "p75": 0.10086213446682657,
+      "p95": 0.14245804874050982,
+      "p99": 0.18040502958300395,
+      "max": 0.29302146956909175
+    },
+    "per_match_log_loss_A_minus_B": {
+      "min": -6.413790948845694,
+      "p01": -1.8179247648693329,
+      "p05": -0.6383521325796093,
+      "p25": -0.057305421310506255,
+      "median": 0.06824979555318282,
+      "p75": 0.11496827061204315,
+      "p95": 0.17188145111126507,
+      "p99": 0.22721393889979363,
+      "max": 0.4544794537579091
+    },
+    "overconfidence": {
+      "A_true_outcome_probability_below_005": 46,
+      "B_true_outcome_probability_below_005": 1092,
+      "A_worse_log_loss_by_more_than_1": 0,
+      "B_worse_log_loss_by_more_than_1": 1417
+    },
+    "concentration": {
+      "largest_absolute_loss_difference_rows": 517,
+      "top_1pct_share_of_absolute_loss_difference": 0.14662848038136977,
+      "top_1pct_signed_contribution_to_mean": -0.027486889753659375,
+      "largest_10_events_share_of_absolute_net_event_loss_difference": 0.0430450026759972
+    },
+    "interpretation": "Descriptive concentration and overconfidence counts; no event or observation is removed using these diagnostics."
+  },
+  "subgroups": {
+    "status": "Exploratory, no subgroup hypothesis tests or selection",
+    "rows": [
+      {
+        "category": "year",
+        "value": "2024",
+        "n": 6633,
+        "A": {
+          "accuracy": 0.6660636212875019,
+          "roc_auc": 0.7320689195575437,
+          "brier_score": 0.20862476056676427,
+          "log_loss": 0.6024638313947491
+        },
+        "B": {
+          "accuracy": 0.6635006784260515,
+          "roc_auc": 0.7329963555339135,
+          "brier_score": 0.2138923783184281,
+          "log_loss": 0.6288196125123553
+        },
+        "difference": {
+          "accuracy": 0.0025629428614503125,
+          "roc_auc": -0.0009274359763697948,
+          "brier_score": -0.0052676177516638445,
+          "log_loss": -0.02635578111760617
+        }
+      },
+      {
+        "category": "year",
+        "value": "2025",
+        "n": 31268,
+        "A": {
+          "accuracy": 0.6914097479851605,
+          "roc_auc": 0.7631462823277317,
+          "brier_score": 0.19790981342519448,
+          "log_loss": 0.5786464512135635
+        },
+        "B": {
+          "accuracy": 0.6909620058846104,
+          "roc_auc": 0.762759562098753,
+          "brier_score": 0.20663124144773867,
+          "log_loss": 0.6343088796198791
+        },
+        "difference": {
+          "accuracy": 0.000447742100550097,
+          "roc_auc": 0.00038672022897878744,
+          "brier_score": -0.008721428022544192,
+          "log_loss": -0.055662428406315634
+        }
+      },
+      {
+        "category": "year",
+        "value": "2026",
+        "n": 13765,
+        "A": {
+          "accuracy": 0.7001089720305121,
+          "roc_auc": 0.7674963003359201,
+          "brier_score": 0.1963676107308492,
+          "log_loss": 0.5761862112598313
+        },
+        "B": {
+          "accuracy": 0.69698510715583,
+          "roc_auc": 0.765841020233697,
+          "brier_score": 0.2034145060544286,
+          "log_loss": 0.6251345557567635
+        },
+        "difference": {
+          "accuracy": 0.0031238648746821918,
+          "roc_auc": 0.0016552801022230446,
+          "brier_score": -0.007046895323579383,
+          "log_loss": -0.048948344496932195
+        }
+      },
+      {
+        "category": "surface",
+        "value": "Carpet",
+        "n": 209,
+        "A": {
+          "accuracy": 0.6411483253588517,
+          "roc_auc": 0.7121128825361921,
+          "brier_score": 0.21897127310332304,
+          "log_loss": 0.6245977225458618
+        },
+        "B": {
+          "accuracy": 0.6411483253588517,
+          "roc_auc": 0.7270478284771853,
+          "brier_score": 0.23112287226887201,
+          "log_loss": 0.6905463924583028
+        },
+        "difference": {
+          "accuracy": 0.0,
+          "roc_auc": -0.014934945940993205,
+          "brier_score": -0.012151599165548976,
+          "log_loss": -0.06594866991244108
+        }
+      },
+      {
+        "category": "surface",
+        "value": "Clay",
+        "n": 21573,
+        "A": {
+          "accuracy": 0.696240671209382,
+          "roc_auc": 0.7679035516872288,
+          "brier_score": 0.1959903926853702,
+          "log_loss": 0.5743639146881698
+        },
+        "B": {
+          "accuracy": 0.6948500440365272,
+          "roc_auc": 0.7665821003110697,
+          "brier_score": 0.203920407213577,
+          "log_loss": 0.6291618636842037
+        },
+        "difference": {
+          "accuracy": 0.0013906271728548747,
+          "roc_auc": 0.0013214513761591329,
+          "brier_score": -0.007930014528206797,
+          "log_loss": -0.05479794899603385
+        }
+      },
+      {
+        "category": "surface",
+        "value": "Grass",
+        "n": 931,
+        "A": {
+          "accuracy": 0.6788399570354458,
+          "roc_auc": 0.747515444533978,
+          "brier_score": 0.20472145595597913,
+          "log_loss": 0.5939874957673236
+        },
+        "B": {
+          "accuracy": 0.6809881847475833,
+          "roc_auc": 0.7491779895708874,
+          "brier_score": 0.2085870208573704,
+          "log_loss": 0.6138109606880928
+        },
+        "difference": {
+          "accuracy": -0.002148227712137518,
+          "roc_auc": -0.0016625450369094352,
+          "brier_score": -0.003865564901391283,
+          "log_loss": -0.01982346492076925
+        }
+      },
+      {
+        "category": "surface",
+        "value": "Hard",
+        "n": 28953,
+        "A": {
+          "accuracy": 0.6869063654888958,
+          "roc_auc": 0.7558151120212976,
+          "brier_score": 0.2006904580441897,
+          "log_loss": 0.58529917500913
+        },
+        "B": {
+          "accuracy": 0.685317583670086,
+          "roc_auc": 0.7555827253433038,
+          "brier_score": 0.20854558551004304,
+          "log_loss": 0.6327778334561861
+        },
+        "difference": {
+          "accuracy": 0.0015887818188098368,
+          "roc_auc": 0.00023238667799374557,
+          "brier_score": -0.007855127465853345,
+          "log_loss": -0.04747865844705612
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "15",
+        "n": 15330,
+        "A": {
+          "accuracy": 0.7088714938030006,
+          "roc_auc": 0.7791462177435827,
+          "brier_score": 0.19203054972884026,
+          "log_loss": 0.5662865984293484
+        },
+        "B": {
+          "accuracy": 0.7065883887801696,
+          "roc_auc": 0.7794466705249541,
+          "brier_score": 0.20437091461467743,
+          "log_loss": 0.6502990445641795
+        },
+        "difference": {
+          "accuracy": 0.0022831050228310223,
+          "roc_auc": -0.0003004527813713631,
+          "brier_score": -0.012340364885837174,
+          "log_loss": -0.08401244613483116
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "25",
+        "n": 8897,
+        "A": {
+          "accuracy": 0.7324940991345398,
+          "roc_auc": 0.808425215814719,
+          "brier_score": 0.17875940572276183,
+          "log_loss": 0.5340753259129749
+        },
+        "B": {
+          "accuracy": 0.7339552658199393,
+          "roc_auc": 0.8079925403145726,
+          "brier_score": 0.18697561372136362,
+          "log_loss": 0.6015566756451609
+        },
+        "difference": {
+          "accuracy": -0.0014611666853995287,
+          "roc_auc": 0.00043267550014647327,
+          "brier_score": -0.008216207998601788,
+          "log_loss": -0.067481349732186
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "A",
+        "n": 3677,
+        "A": {
+          "accuracy": 0.6584171879249389,
+          "roc_auc": 0.7194008787112235,
+          "brier_score": 0.21297844645378897,
+          "log_loss": 0.6126380928633094
+        },
+        "B": {
+          "accuracy": 0.6608648354636932,
+          "roc_auc": 0.7186745366055711,
+          "brier_score": 0.21694490956852006,
+          "log_loss": 0.6264486933079015
+        },
+        "difference": {
+          "accuracy": -0.0024476475387543717,
+          "roc_auc": 0.0007263421056523667,
+          "brier_score": -0.003966463114731089,
+          "log_loss": -0.013810600444592147
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "C",
+        "n": 20114,
+        "A": {
+          "accuracy": 0.6698816744556031,
+          "roc_auc": 0.7337298775892862,
+          "brier_score": 0.2085251099040919,
+          "log_loss": 0.6033860691595778
+        },
+        "B": {
+          "accuracy": 0.6668489609227404,
+          "roc_auc": 0.7327226741667705,
+          "brier_score": 0.21396552420768578,
+          "log_loss": 0.6326524197913194
+        },
+        "difference": {
+          "accuracy": 0.0030327135328627186,
+          "roc_auc": 0.0010072034225157012,
+          "brier_score": -0.005440414303593877,
+          "log_loss": -0.029266350631741544
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "D",
+        "n": 104,
+        "A": {
+          "accuracy": 0.6442307692307693,
+          "roc_auc": 0.7507407407407407,
+          "brier_score": 0.20147674694200615,
+          "log_loss": 0.5770831234988173
+        },
+        "B": {
+          "accuracy": 0.6442307692307693,
+          "roc_auc": 0.7396296296296296,
+          "brier_score": 0.21640549995766697,
+          "log_loss": 0.6133400995174708
+        },
+        "difference": {
+          "accuracy": 0.0,
+          "roc_auc": 0.011111111111111072,
+          "brier_score": -0.014928753015660823,
+          "log_loss": -0.03625697601865352
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "F",
+        "n": 60,
+        "A": {
+          "accuracy": 0.6,
+          "roc_auc": 0.6977777777777778,
+          "brier_score": 0.22119863402299925,
+          "log_loss": 0.6264105596728237
+        },
+        "B": {
+          "accuracy": 0.5833333333333334,
+          "roc_auc": 0.7,
+          "brier_score": 0.23736687423577257,
+          "log_loss": 0.6755275576847054
+        },
+        "difference": {
+          "accuracy": 0.016666666666666607,
+          "roc_auc": -0.0022222222222221255,
+          "brier_score": -0.016168240212773327,
+          "log_loss": -0.04911699801188174
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "G",
+        "n": 1429,
+        "A": {
+          "accuracy": 0.6864940517844647,
+          "roc_auc": 0.7693926332288401,
+          "brier_score": 0.19516616731487682,
+          "log_loss": 0.5705068035291095
+        },
+        "B": {
+          "accuracy": 0.6920923722883136,
+          "roc_auc": 0.7707758620689655,
+          "brier_score": 0.1979675398316415,
+          "log_loss": 0.5834773915854647
+        },
+        "difference": {
+          "accuracy": -0.005598320503848897,
+          "roc_auc": -0.0013832288401254278,
+          "brier_score": -0.002801372516764683,
+          "log_loss": -0.012970588056355203
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "M",
+        "n": 1994,
+        "A": {
+          "accuracy": 0.6334002006018055,
+          "roc_auc": 0.6925044466003719,
+          "brier_score": 0.22112040099463806,
+          "log_loss": 0.6305054600592043
+        },
+        "B": {
+          "accuracy": 0.6308926780341023,
+          "roc_auc": 0.6939596976311747,
+          "brier_score": 0.22705209924189665,
+          "log_loss": 0.6490902827496285
+        },
+        "difference": {
+          "accuracy": 0.0025075225677031465,
+          "roc_auc": -0.0014552510308027955,
+          "brier_score": -0.005931698247258588,
+          "log_loss": -0.018584822690424274
+        }
+      },
+      {
+        "category": "tourney_level",
+        "value": "O",
+        "n": 61,
+        "A": {
+          "accuracy": 0.7868852459016393,
+          "roc_auc": 0.864516129032258,
+          "brier_score": 0.1536662958839438,
+          "log_loss": 0.46492211556666246
+        },
+        "B": {
+          "accuracy": 0.7540983606557377,
+          "roc_auc": 0.8569892473118279,
+          "brier_score": 0.15363362847324427,
+          "log_loss": 0.4484712162592613
+        },
+        "difference": {
+          "accuracy": 0.032786885245901676,
+          "roc_auc": 0.007526881720430145,
+          "brier_score": 3.2667410699516175e-05,
+          "log_loss": 0.01645089930740118
+        }
+      }
+    ]
+  },
+  "clustering": {
+    "event": "Exact tourney_id edition, including year and all draws; any date/year span stays in the same recorded event ID",
+    "calendar_28d": "Non-overlapping fixed 28-day bins since Monday 1970-01-05; group whole events by earliest full-test reference date, retain anchor for all subsets",
+    "limitations": "Resampling units are assumed independent within each design, not empirically proven independent. Repeated players across events/blocks and longer dependence remain. Tournament reference dates are not exact match dates. No bootstrap resolves unidentified V1 row order or source availability."
+  },
+  "inferential_limits": "Pointwise percentile intervals, no family-wise coverage claim. All subset/ancillary/scoring analyses exploratory. McNemar is an iid-match reference. No DeLong iid p-value, equivalence test, or practical superiority claim. Uncertainty conditions on fixed fitted models and frozen predictions; excludes training/model-selection uncertainty.",
+  "operations": {
+    "model_fits": 0,
+    "inference_calls": 0,
+    "notebooks_executed": 0,
+    "existing_scripts_rerun": 0
+  },
+  "environment": {
+    "python": "3.13.9",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "pyarrow": "23.0.1",
+    "joblib": "1.5.3"
+  },
+  "elapsed_seconds": 274.80835770000704
+}

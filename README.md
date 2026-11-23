@@ -37,14 +37,14 @@ Rows with a missing surface are excluded before the final feature table, which i
 
 ## Saved test outputs
 
-These values were recomputed from the saved V1.1 and V2.1 prediction artifacts after one-to-one alignment with the test metadata. The exact aggregate output is committed as `reproduction/paired_metrics.csv`; row-level artifacts remain private.
+These values were recomputed from the saved V1.1 and V2.1 prediction artifacts. V2.1 identifiers, oriented players and outcomes agree with the test metadata. V1.1 lacks match/player identifiers: its saved tournament/date/best-of/outcome context agrees in order, but most rows are ambiguous within that context. Full-population pairing is therefore conditional on preserved V1.1 order. The exact aggregate output is committed as `reproduction/paired_metrics.csv`; row-level artifacts remain private.
 
 | Approach | Accuracy | ROC-AUC | Brier score | Log loss |
 |---|---:|---:|---:|---:|
 | V1.1 regression plus Markov | 0.68904115 | 0.75988840 | 0.20670643 | 0.63115991 |
 | V2.1 equal classifier ensemble | 0.69047343 | 0.76048069 | 0.19887455 | 0.58104872 |
 
-Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved metrics, but the accuracy and ROC-AUC differences are small.
+Both rows cover the 51,666-record chronological test population. The [independent paired evaluation](validation/paired_evaluation/report.md) reproduces all four metrics and reports match, event and calendar-block uncertainty. The small accuracy and ROC-AUC differences do not establish a material predictive advantage. Brier/log-loss differences and scoring-only corrections are interpreted separately, subject to the alignment limitation.
 
 ## Repository contents
 
@@ -57,6 +57,13 @@ Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved me
 - `reproducibility_notes.md` - environment, data, runtime and evidence limitations.
 
 ## Quick verification
+
+The [paired evaluation package](validation/paired_evaluation/README.md) uses frozen
+predictions only, with 5,000 paired bootstrap replicates per design. It preserves
+the original full population and reports completed-match, supported-policy and
+unique-shared-context sensitivities. No existing notebook or model needs rerunning
+for this audit; definitive authentication of V1.1 identity requires preserved
+ID-bearing evidence rather than assigning new IDs by array position.
 
 The [independent historical scoring audit](validation/scoring/historical/report.md)
 compares all 51,666 saved Markov predictions with a server-state reference engine.

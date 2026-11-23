@@ -1,0 +1,31 @@
+test_ambiguity_is_retained_and_quantified (test_evaluation.AlignmentTests.test_ambiguity_is_retained_and_quantified) ... ok
+test_duplicate_and_missing_ids (test_evaluation.AlignmentTests.test_duplicate_and_missing_ids) ... ok
+test_missing_inferred_counterfactual_is_not_used (test_evaluation.AlignmentTests.test_missing_inferred_counterfactual_is_not_used) ... ok
+test_missing_prediction_does_not_silently_intersect (test_evaluation.AlignmentTests.test_missing_prediction_does_not_silently_intersect) ... ok
+test_orientation_mismatch (test_evaluation.AlignmentTests.test_orientation_mismatch) ... ok
+test_outcome_mismatch (test_evaluation.AlignmentTests.test_outcome_mismatch) ... ok
+test_reordered_v2_is_reconciled (test_evaluation.AlignmentTests.test_reordered_v2_is_reconciled) ... ok
+test_retirement_subset_and_bestof_preservation (test_evaluation.AlignmentTests.test_retirement_subset_and_bestof_preservation) ... ok
+test_scoring_sidecar_validation (test_evaluation.AlignmentTests.test_scoring_sidecar_validation) ... ok
+test_undetectable_ambiguous_swap_never_becomes_unique (test_evaluation.AlignmentTests.test_undetectable_ambiguous_swap_never_becomes_unique) ... ok
+test_v1_incorrect_order_is_rejected (test_evaluation.AlignmentTests.test_v1_incorrect_order_is_rejected) ... ok
+test_event_and_block_units_and_subset_consistency (test_evaluation.BootstrapTests.test_event_and_block_units_and_subset_consistency) ... ok
+test_identical_models_have_zero_difference (test_evaluation.BootstrapTests.test_identical_models_have_zero_difference) ... ok
+test_invalid_cluster_codes (test_evaluation.BootstrapTests.test_invalid_cluster_codes) ... ok
+test_one_class_replicates_counted (test_evaluation.BootstrapTests.test_one_class_replicates_counted) ... ok
+test_seed_reproducibility (test_evaluation.BootstrapTests.test_seed_reproducibility) ... ok
+test_shared_weights_preserve_pairing_and_clusters (test_evaluation.BootstrapTests.test_shared_weights_preserve_pairing_and_clusters) ... ok
+test_boundary_clipping (test_evaluation.MetricTests.test_boundary_clipping) ... ok
+test_invalid_outcomes_and_lengths (test_evaluation.MetricTests.test_invalid_outcomes_and_lengths) ... ok
+test_invalid_probabilities (test_evaluation.MetricTests.test_invalid_probabilities) ... ok
+test_known_values (test_evaluation.MetricTests.test_known_values) ... ok
+test_mcnemar_counts_and_exact_probability (test_evaluation.MetricTests.test_mcnemar_counts_and_exact_probability) ... ok
+test_secondary_library_metric_check (test_evaluation.MetricTests.test_secondary_library_metric_check) ... ok
+test_single_class_auc (test_evaluation.MetricTests.test_single_class_auc) ... ok
+test_ties (test_evaluation.MetricTests.test_ties) ... ok
+test_weighted_auc_matches_expanded_pairs (test_evaluation.MetricTests.test_weighted_auc_matches_expanded_pairs) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.790s
+
+OK

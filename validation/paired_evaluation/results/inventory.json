@@ -1,0 +1,177 @@
+{
+  "primary_comparison": "V2.1 equal classifier ensemble (A) minus V1.1 regression plus Markov (B)",
+  "outcome": "playerA_wins: 1 if the oriented Player A is the recorded winner, including saved retirements",
+  "direction": "P(Player A wins match)",
+  "threshold": "probability >= 0.5; tie predicts A",
+  "candidates": [
+    {
+      "name": "V1.1 regression plus Markov",
+      "version": "V1.1",
+      "artifact": "v1_1_results.joblib",
+      "probability": "match_win_probA",
+      "composition": "Inverse-validation-MAE Elastic Net, LightGBM, XGBoost, CatBoost serve regressors; analytical scoring",
+      "rows": 51666,
+      "originally_reported": {
+        "accuracy": 0.6890411489180506,
+        "roc_auc": 0.7598884003716795,
+        "brier_score": 0.20670643128582078,
+        "log_loss": 0.6311599058905419
+      },
+      "primary": true
+    },
+    {
+      "name": "V2.1 equal classifier ensemble",
+      "version": "V2.1",
+      "artifact": "v2_1_test_match_probabilities.parquet",
+      "probability": "match_win_probA",
+      "rows": 51666,
+      "primary": true,
+      "composition": "Equal CatBoost, LightGBM, XGBoost, SGD",
+      "originally_reported": {
+        "accuracy": 0.6904734254635544,
+        "roc_auc": 0.7604806870433078,
+        "brier_score": 0.19887454505339147,
+        "log_loss": 0.581048717303036
+      }
+    },
+    {
+      "name": "V2.1 stacking",
+      "version": "V2.1",
+      "artifact": "v2_1_test_match_probabilities.parquet",
+      "probability": "stacked_probA",
+      "rows": 51666,
+      "primary": false,
+      "composition": "V2.1 stacking",
+      "originally_reported": "Rounded output in notebook 05 cell 170 (zero-based)"
+    },
+    {
+      "name": "V2.1 CatBoost",
+      "version": "V2.1",
+      "artifact": "v2_1_test_match_probabilities.parquet",
+      "probability": "catboost_probA",
+      "rows": 51666,
+      "primary": false,
+      "composition": "V2.1 CatBoost",
+      "originally_reported": "Rounded output in notebook 05 cell 170 (zero-based)"
+    },
+    {
+      "name": "V2.1 LightGBM",
+      "version": "V2.1",
+      "artifact": "v2_1_test_match_probabilities.parquet",
+      "probability": "lightgbm_probA",
+      "rows": 51666,
+      "primary": false,
+      "composition": "V2.1 LightGBM",
+      "originally_reported": "Rounded output in notebook 05 cell 170 (zero-based)"
+    },
+    {
+      "name": "V2.1 XGBoost",
+      "version": "V2.1",
+      "artifact": "v2_1_test_match_probabilities.parquet",
+      "probability": "xgboost_probA",
+      "rows": 51666,
+      "primary": false,
+      "composition": "V2.1 XGBoost",
+      "originally_reported": "Rounded output in notebook 05 cell 170 (zero-based)"
+    },
+    {
+      "name": "V2.1 SGD",
+      "version": "V2.1",
+      "artifact": "v2_1_test_match_probabilities.parquet",
+      "probability": "sgd_probA",
+      "rows": 51666,
+      "primary": false,
+      "composition": "V2.1 SGD",
+      "originally_reported": "Rounded output in notebook 05 cell 170 (zero-based)"
+    }
+  ],
+  "splits": {
+    "test": {
+      "n": 51666,
+      "first": "2024-07-08",
+      "last": "2026-06-01"
+    },
+    "train": {
+      "n": 181632,
+      "first": "1990-12-31",
+      "last": "2022-07-25"
+    },
+    "val": {
+      "n": 26109,
+      "first": "2022-08-01",
+      "last": "2024-07-01"
+    }
+  },
+  "notebook_evidence": [
+    {
+      "file": "notebooks/03_v1_1_model_training.ipynb",
+      "sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cells": [
+        {
+          "zero_based": 154,
+          "execution_count": 80,
+          "source_sha256": "477c253412d37a66844eeb4262595988458a7f992fb5252fa2e5a5270513e572"
+        },
+        {
+          "zero_based": 170,
+          "execution_count": 23,
+          "source_sha256": "62bca5be9492c77d3340f7f11298046accf77a3ecd7b19e67228a7e592a919bc"
+        },
+        {
+          "zero_based": 193,
+          "execution_count": 36,
+          "source_sha256": "946412c6a4b0efa58f46722c9fee03d079757984a9cb8cea99789fd865e93367"
+        },
+        {
+          "zero_based": 201,
+          "execution_count": null,
+          "source_sha256": "201a49ce8b78756491b450a4d39a8ff33d791d6570464736422c6bd1de83f0dc"
+        },
+        {
+          "zero_based": 209,
+          "execution_count": 41,
+          "source_sha256": "854e62edca9a6772270cba1cda088e54e9a9d8595007c4a98dbee7b47bc4709e"
+        },
+        {
+          "zero_based": 213,
+          "execution_count": 44,
+          "source_sha256": "ac85f01d88abb7cc1fd6e2e5e5acba8637b64546aa2e4ea5011ee5a1a7881812"
+        }
+      ]
+    },
+    {
+      "file": "notebooks/05_v2_1_model_training.ipynb",
+      "sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cells": [
+        {
+          "zero_based": 158,
+          "execution_count": 83,
+          "source_sha256": "b8e32d3ea30780c41fe28d0a58e220c56671c4683505bcee72328313197ece5a"
+        },
+        {
+          "zero_based": 169,
+          "execution_count": 89,
+          "source_sha256": "48df43b47133192487757414069acdb2504eaba21f5d671810075ba26494c640"
+        },
+        {
+          "zero_based": 170,
+          "execution_count": 93,
+          "source_sha256": "39be5e367f858df028a57e83e22ea30bf40596236d473195f4954969b759edfe"
+        },
+        {
+          "zero_based": 172,
+          "execution_count": 91,
+          "source_sha256": "3879f41b38c68e12c3abcaa655d3b565ac20e345b8d693c0b0c77e934a960ec1"
+        },
+        {
+          "zero_based": 173,
+          "execution_count": 92,
+          "source_sha256": "3119fe932e47dfd1e86aac75b021e96a7a75eae85ca8e1377865f120ff14cd65"
+        }
+      ]
+    }
+  ],
+  "out_of_sample_evidence": "Notebook source and recorded outputs describe train+validation refits and a chronological untouched test partition; this audit does not independently authenticate prediction-generation history or prove no leakage.",
+  "unavailable": "No frozen per-match V1.1 individual-regressor match probabilities or standalone Elo/rank baseline prediction artifact was supplied. No new baseline predictions are generated.",
+  "selection": "This reproduces the existing README comparison, not a choice made by this audit. Earlier notebook exploration includes test displays; global pre-registration and absence of all test-guided choices are not established. Additional V2 methods and all subsets are descriptive/exploratory; no multiple-model winner search or confirmatory significance claim."
+}

@@ -1,0 +1,80 @@
+{
+  "baseline_commit": "65e1b58811ebeb44e1be513590a7009a1dd37b91",
+  "scope": "Public paired-evaluation package only, excluding this manifest and private rows/caches",
+  "algorithm": "sha256",
+  "files": {
+    ".gitattributes": {
+      "sha256": "d284e809120dc9cd24c871871bdb2b32d151fd2b9f27ce8593780f3ea8315e41",
+      "bytes": 74
+    },
+    ".gitignore": {
+      "sha256": "f1b0021be102612714256cfc3d7e2d204bfeaa482d2be5103862ef520bbb54e3",
+      "bytes": 28
+    },
+    "alignment.py": {
+      "sha256": "516460b6ec87e4dfdb89effdeda5455b7b5e0ad4fad583cbb0692bfb8ba07041",
+      "bytes": 5925
+    },
+    "diagnostics.py": {
+      "sha256": "9a482d3f34da9c11d8682228e8acd7acd6f4b5ff0a7a00b74d6ca5e243a183e2",
+      "bytes": 2590
+    },
+    "inventory.py": {
+      "sha256": "91bebdcf5f4e0f76e70d1bed1ea56543c13b78ce277155588eb92d4f31039891",
+      "bytes": 3580
+    },
+    "metrics.py": {
+      "sha256": "acaf422e9bbad6d2f484c53736a5097f41acc334a51be04a38236172dd6c59c9",
+      "bytes": 2991
+    },
+    "paired_bootstrap.py": {
+      "sha256": "d009ab31fc1263f7e28487517dca8679ea62b013626ddc741d0fc6693c86c198",
+      "bytes": 3407
+    },
+    "README.md": {
+      "sha256": "429e60f93cf465087569aae7c8318533c0d5748f43e21d3546000e15af8d997d",
+      "bytes": 7197
+    },
+    "report.md": {
+      "sha256": "471c7542a5c7eff043b659792b787e74b4e2c90b21a7af6583de2c48169bb9a8",
+      "bytes": 20466
+    },
+    "requirements.txt": {
+      "sha256": "57a220908cee2034741b59ef21dd8c762c204e6ff4fa252a0257eca4a92199a2",
+      "bytes": 51
+    },
+    "results/comparison.csv": {
+      "sha256": "d4f2de2fa98516366d082efd64c81373a23f7fc975db87c6871aed4b5351eecd",
+      "bytes": 930
+    },
+    "results/inventory.json": {
+      "sha256": "db6eab510b6d644937e89a585737031cbe80f953369f2e3d6f07e5d4f630f85c",
+      "bytes": 6624
+    },
+    "results/manifest.json": {
+      "sha256": "fec9e29ae0aefe3fa9ddf2e9644f6d13a54ba187aab5b2ee0cdbb51ae6529358",
+      "bytes": 1896
+    },
+    "results/summary.json": {
+      "sha256": "a7490d771703773ee342ddc2124e71c5e9b31472ba0fb5d54aaf772bf5bc235b",
+      "bytes": 59964
+    },
+    "reviewer_summary.md": {
+      "sha256": "b15a25b83b14a11d34c48f5aa9e4cb0674bfbaf90a8e8728e889cca58d9f8bb8",
+      "bytes": 3402
+    },
+    "run_audit.py": {
+      "sha256": "44601e33cf4623c03ab521f7c387a7bbfa61992372b4ba70a021c7cf6a586436",
+      "bytes": 10358
+    },
+    "test_evaluation.py": {
+      "sha256": "02cdb0da77551bc13327d1d6f69db319fbfe0c9b68fabd3bc303943ee9c3809d",
+      "bytes": 9833
+    },
+    "tests.txt": {
+      "sha256": "ec277a278ab2dcfb35ab17a66238d4780ff870511c8e8ce1611ee232f8eb6537",
+      "bytes": 2955
+    }
+  },
+  "repository_readme_sha256": "90dcabf8f4f51850fe92ddfae574aabf304e2f3ff69175c9c727acc5fbf0fd17"
+}
