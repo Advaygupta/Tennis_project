@@ -58,6 +58,14 @@ Both rows cover 51,666 held-out matches. V2.1 is slightly better on the saved me
 
 ## Quick verification
 
+The [independent historical scoring audit](validation/scoring/historical/report.md)
+compares all 51,666 saved Markov predictions with a server-state reference engine.
+All agree under their original assigned rules. The audit separately identifies
+30 Next Gen and 18 Laver Cup format mismatches, four test best-of metadata conflicts,
+and the remaining historical-evidence limitations. Scoring-only counterfactuals
+are reported separately; the original saved metrics above have not been replaced.
+See its [reproduction instructions](validation/scoring/historical/README.md).
+
 The [real-data reconstruction and full-history report](validation/temporal/real_data_results/report.md)
 records the completed two-check run: all 36,960 values across 154 historical columns
 and 240 sampled matches matched, and the scan of 855,130 historical rows found no

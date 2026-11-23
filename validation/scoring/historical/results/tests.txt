@@ -1,0 +1,29 @@
+test_best_of_conflicts_preserved_as_audit_override (test_reference.RegistryTests.test_best_of_conflicts_preserved_as_audit_override) ... ok
+test_dated_exceptions_override_generic_tour (test_reference.RegistryTests.test_dated_exceptions_override_generic_tour) ... ok
+test_doha_alias (test_reference.RegistryTests.test_doha_alias) ... ok
+test_grand_slam_boundaries (test_reference.RegistryTests.test_grand_slam_boundaries) ... ok
+test_no_unknown_competition_default (test_reference.RegistryTests.test_no_unknown_competition_default) ... ok
+test_original_selector_event_errors_and_alias (test_reference.RegistryTests.test_original_selector_event_errors_and_alias) ... ok
+test_qualifying_is_not_quarterfinal (test_reference.RegistryTests.test_qualifying_is_not_quarterfinal) ... ok
+test_score_does_not_select_rule (test_reference.RegistryTests.test_score_does_not_select_rule) ... ok
+test_unsupported_historical_qualifying_is_unresolved (test_reference.RegistryTests.test_unsupported_historical_qualifying_is_unresolved) ... ok
+test_advantage_tail_exact_cyclic_game_chain (test_reference.ScoringTests.test_advantage_tail_exact_cyclic_game_chain) ... ok
+test_all_rule_match_symmetries (test_reference.ScoringTests.test_all_rule_match_symmetries) ... ok
+test_best_of_five_three_four_five_set_paths (test_reference.ScoringTests.test_best_of_five_three_four_five_set_paths) ... ok
+test_game_deuce_exact_oracle (test_reference.ScoringTests.test_game_deuce_exact_oracle) ... ok
+test_invalid_and_nonterminating_inputs (test_reference.ScoringTests.test_invalid_and_nonterminating_inputs) ... ok
+test_joint_transition_support (test_reference.ScoringTests.test_joint_transition_support) ... ok
+test_match_tiebreak_differs_from_final_set_tiebreak (test_reference.ScoringTests.test_match_tiebreak_differs_from_final_set_tiebreak) ... ok
+test_monotonicity_and_extreme_normalization (test_reference.ScoringTests.test_monotonicity_and_extreme_normalization) ... ok
+test_next_set_server (test_reference.ScoringTests.test_next_set_server) ... ok
+test_nextgen_differs_from_standard (test_reference.ScoringTests.test_nextgen_differs_from_standard) ... ok
+test_no_ad_game (test_reference.ScoringTests.test_no_ad_game) ... ok
+test_original_historical_grid (test_reference.ScoringTests.test_original_historical_grid) ... ok
+test_service_sequence_and_extended_phase (test_reference.ScoringTests.test_service_sequence_and_extended_phase) ... ok
+test_tiebreak_exact_cyclic_chain (test_reference.ScoringTests.test_tiebreak_exact_cyclic_chain) ... ok
+test_unknown_first_is_single_mixture (test_reference.ScoringTests.test_unknown_first_is_single_mixture) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.685s
+
+OK

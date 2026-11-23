@@ -23,4 +23,6 @@ shap_values/
 validation/temporal/results/real_feature_discrepancies.csv
 validation/temporal/results/contribution_decisions.csv
 validation/temporal/two_audit_runner/audit_outputs/
+validation/scoring/historical/audit_private/
+validation/scoring/historical/results/event_rule_inventory.csv
 

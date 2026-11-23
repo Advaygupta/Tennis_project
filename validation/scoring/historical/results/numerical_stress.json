@@ -1,0 +1,290 @@
+[
+  {
+    "p": 1e-08,
+    "q": 2e-08,
+    "rule": "standard",
+    "reference_status": "defined",
+    "original_probability": 0.2592592563610168,
+    "reference_probability": 0.25925925629629476,
+    "absolute_error": 6.472206104390921e-11
+  },
+  {
+    "p": 1e-08,
+    "q": 2e-08,
+    "rule": "advantage",
+    "reference_status": "defined",
+    "original_probability": 0.5555555526573132,
+    "reference_probability": 0.13725490045777183,
+    "absolute_error": 0.4183006521995413
+  },
+  {
+    "p": 1e-08,
+    "q": 2e-08,
+    "rule": "tb10",
+    "reference_status": "defined",
+    "original_probability": 0.25925925636101615,
+    "reference_probability": 0.2592592562962941,
+    "absolute_error": 6.472206104390921e-11
+  },
+  {
+    "p": 1e-08,
+    "q": 2e-08,
+    "rule": "wimbledon_12",
+    "reference_status": "defined",
+    "original_probability": 0.2592592563610168,
+    "reference_probability": 0.25925925629629476,
+    "absolute_error": 6.472206104390921e-11
+  },
+  {
+    "p": 0.99999999,
+    "q": 0.99999998,
+    "rule": "standard",
+    "reference_status": "defined",
+    "original_probability": 0.740740743365277,
+    "reference_probability": 0.7407407420589305,
+    "absolute_error": 1.306346475438147e-09
+  },
+  {
+    "p": 0.99999999,
+    "q": 0.99999998,
+    "rule": "advantage",
+    "reference_status": "defined",
+    "original_probability": 0.6666666690705177,
+    "reference_probability": 0.8627450981251038,
+    "absolute_error": 0.19607842905458606
+  },
+  {
+    "p": 0.99999999,
+    "q": 0.99999998,
+    "rule": "tb10",
+    "reference_status": "defined",
+    "original_probability": 0.7407407433652775,
+    "reference_probability": 0.7407407420589311,
+    "absolute_error": 1.3063463644158446e-09
+  },
+  {
+    "p": 0.99999999,
+    "q": 0.99999998,
+    "rule": "wimbledon_12",
+    "reference_status": "defined",
+    "original_probability": 0.740740743365277,
+    "reference_probability": 0.7407407420589305,
+    "absolute_error": 1.306346475438147e-09
+  },
+  {
+    "p": 1e-12,
+    "q": 2e-12,
+    "rule": "standard",
+    "reference_status": "defined",
+    "original_probability": 0.2592690914058588,
+    "reference_probability": 0.25925925925896304,
+    "absolute_error": 9.83214689576073e-06
+  },
+  {
+    "p": 1e-12,
+    "q": 2e-12,
+    "rule": "advantage",
+    "reference_status": "defined",
+    "original_probability": 0.48149377159676,
+    "reference_probability": 0.13725490196063406,
+    "absolute_error": 0.34423886963612593
+  },
+  {
+    "p": 1e-12,
+    "q": 2e-12,
+    "rule": "tb10",
+    "reference_status": "defined",
+    "original_probability": 0.2592690914058588,
+    "reference_probability": 0.25925925925896304,
+    "absolute_error": 9.83214689576073e-06
+  },
+  {
+    "p": 1e-12,
+    "q": 2e-12,
+    "rule": "wimbledon_12",
+    "reference_status": "defined",
+    "original_probability": 0.2592690914058588,
+    "reference_probability": 0.25925925925896304,
+    "absolute_error": 9.83214689576073e-06
+  },
+  {
+    "p": 0.999999999999,
+    "q": 0.999999999998,
+    "rule": "standard",
+    "reference_status": "defined",
+    "original_probability": 0.7407407407398519,
+    "reference_probability": 0.740740740741037,
+    "absolute_error": 1.1851630787873546e-12
+  },
+  {
+    "p": 0.999999999999,
+    "q": 0.999999999998,
+    "rule": "advantage",
+    "reference_status": "defined",
+    "original_probability": 0.7407407407398519,
+    "reference_probability": 0.8627450980393659,
+    "absolute_error": 0.12200435729951409
+  },
+  {
+    "p": 0.999999999999,
+    "q": 0.999999999998,
+    "rule": "tb10",
+    "reference_status": "defined",
+    "original_probability": 0.7407407407398519,
+    "reference_probability": 0.740740740741037,
+    "absolute_error": 1.1851630787873546e-12
+  },
+  {
+    "p": 0.999999999999,
+    "q": 0.999999999998,
+    "rule": "wimbledon_12",
+    "reference_status": "defined",
+    "original_probability": 0.7407407407398519,
+    "reference_probability": 0.740740740741037,
+    "absolute_error": 1.1851630787873546e-12
+  },
+  {
+    "p": 0.0,
+    "q": 0.0,
+    "rule": "standard",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 0.0,
+    "q": 0.0,
+    "rule": "advantage",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 0.0,
+    "q": 0.0,
+    "rule": "tb10",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 0.0,
+    "q": 0.0,
+    "rule": "wimbledon_12",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 1.0,
+    "q": 1.0,
+    "rule": "standard",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 1.0,
+    "q": 1.0,
+    "rule": "advantage",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 1.0,
+    "q": 1.0,
+    "rule": "tb10",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 1.0,
+    "q": 1.0,
+    "rule": "wimbledon_12",
+    "reference_status": "nonterminating",
+    "original_probability": null,
+    "reference_probability": null,
+    "absolute_error": null
+  },
+  {
+    "p": 1.0,
+    "q": 0.0,
+    "rule": "standard",
+    "reference_status": "defined",
+    "original_probability": 1.0,
+    "reference_probability": 1.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 1.0,
+    "q": 0.0,
+    "rule": "advantage",
+    "reference_status": "defined",
+    "original_probability": 1.0,
+    "reference_probability": 1.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 1.0,
+    "q": 0.0,
+    "rule": "tb10",
+    "reference_status": "defined",
+    "original_probability": 1.0,
+    "reference_probability": 1.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 1.0,
+    "q": 0.0,
+    "rule": "wimbledon_12",
+    "reference_status": "defined",
+    "original_probability": 1.0,
+    "reference_probability": 1.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 0.0,
+    "q": 1.0,
+    "rule": "standard",
+    "reference_status": "defined",
+    "original_probability": 0.0,
+    "reference_probability": 0.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 0.0,
+    "q": 1.0,
+    "rule": "advantage",
+    "reference_status": "defined",
+    "original_probability": 0.0,
+    "reference_probability": 0.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 0.0,
+    "q": 1.0,
+    "rule": "tb10",
+    "reference_status": "defined",
+    "original_probability": 0.0,
+    "reference_probability": 0.0,
+    "absolute_error": 0.0
+  },
+  {
+    "p": 0.0,
+    "q": 1.0,
+    "rule": "wimbledon_12",
+    "reference_status": "defined",
+    "original_probability": 0.0,
+    "reference_probability": 0.0,
+    "absolute_error": 0.0
+  }
+]

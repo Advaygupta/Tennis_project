@@ -1,0 +1,87 @@
+{
+  "baseline_commit": "1d02053b56f09016c4b012ff825f4114b9cb2b1a",
+  "algorithm": "sha256",
+  "scope": "Public audit payload; manifest excludes itself; private records and original source artifacts excluded",
+  "files": {
+    ".gitattributes": {
+      "sha256": "a90d20bc27a7280fd45131d51eb0a75bbb8d0a4bc7104fe9b7666f6c5cd66ce8",
+      "bytes": 218
+    },
+    ".gitignore": {
+      "sha256": "324c1d9d36d38393d490d61d6d141632e9ea5b482f93207e046a9cf877b0546c",
+      "bytes": 568
+    },
+    "README.md": {
+      "sha256": "caa44cf9913bacced0f5dacff30b74451f160c42ed0bb00573e5f5675822afe6",
+      "bytes": 6041
+    },
+    "validation/scoring/historical/audit.py": {
+      "sha256": "1c6ea4af2b0471d5a086b1cf2c59061b3a3218f6840a1cb337b7748670cc5c50",
+      "bytes": 16508
+    },
+    "validation/scoring/historical/engine.py": {
+      "sha256": "f966aae7a06561b12c4748bcbfab0886df941a86f81f7f1bd0cdd60f709b5633",
+      "bytes": 5314
+    },
+    "validation/scoring/historical/production_adapter.py": {
+      "sha256": "ce5b984ba26d11ba06d63c701857cc7f129767927a56eb2d74af24a1928d11b1",
+      "bytes": 2204
+    },
+    "validation/scoring/historical/README.md": {
+      "sha256": "c5e64cb5cbfc0963595a23820d498c0ac0ae84352882fabe205b8fa2f805b4a3",
+      "bytes": 3962
+    },
+    "validation/scoring/historical/registry.py": {
+      "sha256": "2ee32d65ff9291e929817304834f2000b28f0d1ace3fdf789f4aefb029fd0fd4",
+      "bytes": 6752
+    },
+    "validation/scoring/historical/report.md": {
+      "sha256": "844374541881e99842d62d5a2dd49559717deb80166c4579536be7c88ad718f3",
+      "bytes": 15014
+    },
+    "validation/scoring/historical/requirements.txt": {
+      "sha256": "b2657e12a8ac253531e2fe900c5573f52e8219caf3dc41ae6d672fc56ab6becf",
+      "bytes": 41
+    },
+    "validation/scoring/historical/results/event_rule_inventory.csv.gz": {
+      "sha256": "5a1bfa1653e91eacc216b87d58747aa1dd8ca856c8b43caaa8a16bccdf2f84af",
+      "bytes": 144230
+    },
+    "validation/scoring/historical/results/numerical_stress.json": {
+      "sha256": "764a39af4a4125e43a9c9567d760567746ba373cd607ec968d412e096a9c08c9",
+      "bytes": 7366
+    },
+    "validation/scoring/historical/results/rule_coverage.csv": {
+      "sha256": "3eae81738c40e947fa5279477a81e183f16b1fabd23fa190027671a48b9f7697",
+      "bytes": 869
+    },
+    "validation/scoring/historical/results/summary.json": {
+      "sha256": "33688a7977f4e0a682b9590931969df222aa77040a2fd82f5cfe6663e3907ab9",
+      "bytes": 6661
+    },
+    "validation/scoring/historical/results/synthetic_grid.csv": {
+      "sha256": "ad95e433e79d2798912f0efe3820b2ff835ce1e76f0fbf505b346ed0aa8f334e",
+      "bytes": 43765
+    },
+    "validation/scoring/historical/results/tests.txt": {
+      "sha256": "21ed1129bac2a2146599c9a8838cdbf850ef9baa28096a4feefc4eaafbeaac83",
+      "bytes": 2759
+    },
+    "validation/scoring/historical/reviewer_summary.md": {
+      "sha256": "c248598372f677426f1f7cf6641afb67bf493247cacc7d81467abd56cb72cdaf",
+      "bytes": 3567
+    },
+    "validation/scoring/historical/sources.json": {
+      "sha256": "65757e4afc90e4ec7edec2ecb4964685ebe34f83ca81e0c0c4e62233d208bb68",
+      "bytes": 6885
+    },
+    "validation/scoring/historical/test_reference.py": {
+      "sha256": "3dde117167ef03528d21959818d3a88c2deacbb7811f81957b5cdc15f5b49bdf",
+      "bytes": 12727
+    },
+    "validation/scoring/README.md": {
+      "sha256": "c252e26a0148f0f6a1118c4eb4fb535c2185356a585461b8c36e2cca46a03f81",
+      "bytes": 7217
+    }
+  }
+}

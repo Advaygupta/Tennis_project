@@ -1,0 +1,195 @@
+{
+  "scope": "Independent Markov scoring and historical rules audit",
+  "baseline_commit": "1d02053",
+  "model_fits": 0,
+  "model_inference_calls": 0,
+  "notebooks_executed": 0,
+  "existing_scripts_rerun": 0,
+  "absolute_tolerance": 2e-12,
+  "tail_truncation_error": 0,
+  "float_error_bound": "No universal IEEE-754 bound claimed; tolerance is an empirical comparison threshold. Rational cyclic-chain tests cover selected extremes; production stress limitations are recorded separately.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "tests": {
+    "run": 24,
+    "failures": 0,
+    "errors": 0
+  },
+  "extraction": {
+    "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+    "function_ast_sha256": "86a3bfac60269c2bc4197be9f6c2f7166b80bda620ff1002b8512d516ada01cf",
+    "cells_zero_based": {
+      "game_win_probab": 213,
+      "set_win_probab": 213,
+      "probability_reach_6_6": 213,
+      "tiebreak_win_probab": 213,
+      "deciding_set_win_probab": 213,
+      "deciding_set_rule": 213
+    },
+    "notebook_executed": false,
+    "executed": [
+      "game_win_probab",
+      "set_win_probab",
+      "probability_reach_6_6",
+      "tiebreak_win_probab",
+      "deciding_set_win_probab",
+      "deciding_set_rule"
+    ]
+  },
+  "synthetic": {
+    "probability_pairs": 49,
+    "rule_categories": 4,
+    "match_formats": 2,
+    "cases": 392,
+    "initial_server_comparisons": 784,
+    "maximum_absolute_error": 4.496403249731884e-15,
+    "maximum_first_server_difference": 4.440892098500626e-16,
+    "discrepancies": 0
+  },
+  "numerical_stress": {
+    "cases": 32,
+    "nonterminating_reference_cases": 8,
+    "nonfinite_original_cases": 8,
+    "defined_discrepancies": 13
+  },
+  "input_sha256": {
+    "notebooks\\03_v1_1_model_training.ipynb": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+    "reproduction\\artifacts\\matches_v1_1_metadata.csv": "943813de874ded92c15d6542b7e4684b7a2b992ea1871bb99d152819533c989f",
+    "reproduction\\artifacts\\v1_1_results.joblib": "ed2982fda03f9c3735b6694040451f29f833f5a305a05ab854a8fe2fb5b75912"
+  },
+  "metadata": {
+    "rows": 259407,
+    "status_by_split": {
+      "train": {
+        "inferred": 171966,
+        "verified": 6250,
+        "unresolved": 3416
+      },
+      "val": {
+        "inferred": 17015,
+        "verified": 9079,
+        "unresolved": 15
+      },
+      "test": {
+        "verified": 34367,
+        "inferred": 17299
+      }
+    },
+    "best_of_conflicts": 36,
+    "unknown_first_server": true,
+    "metadata_flags": 7897,
+    "scope": "Target-eligible modeling metadata, not all 855130 historical feature-source rows"
+  },
+  "saved_predictions": {
+    "rows": 51666,
+    "required_columns": [
+      "best_of",
+      "deciding_set_rule",
+      "deciding_set_win_probA",
+      "match_win_probA",
+      "p",
+      "playerA_wins",
+      "q",
+      "set_win_probA",
+      "tourney_date",
+      "tourney_name"
+    ],
+    "p_range": [
+      0.3825443995825736,
+      0.7884019767422723
+    ],
+    "q_range": [
+      0.3868140860179461,
+      0.7879553166582456
+    ],
+    "alignment": "Ordered tournament name, date, best_of and outcome agree; saved V1 lacks row/match IDs, so identity cannot be independently established from unique keys",
+    "original_rule_counts": {
+      "standard": 50237,
+      "tb10": 1429
+    },
+    "original_function_vs_saved": {
+      "matching": 51666,
+      "maximum_absolute_error": 1.2212453270876722e-15
+    },
+    "independent_vs_saved_under_original_rules": {
+      "matching": 51666,
+      "discrepancies": 0,
+      "maximum_absolute_error": 3.774758283725532e-15
+    },
+    "rule_format_changes": {
+      "laver_match_tb": {
+        "matches": 18,
+        "changed_beyond_tolerance": 18,
+        "maximum_absolute_difference": 0.036412642565877784,
+        "mean_absolute_difference": 0.024041215812508572
+      },
+      "nextgen": {
+        "matches": 30,
+        "changed_beyond_tolerance": 30,
+        "maximum_absolute_difference": 0.07014768249582229,
+        "mean_absolute_difference": 0.044708873820543886
+      },
+      "best_of_conflict": {
+        "matches": 4,
+        "changed_beyond_tolerance": 4,
+        "maximum_absolute_difference": 0.053048501014643756,
+        "mean_absolute_difference": 0.04455194453079914
+      }
+    },
+    "registry_status_counts": {
+      "verified": 34367,
+      "inferred": 17299
+    },
+    "registry_best_of_conflicts": 4,
+    "retirement_or_incomplete_rows": 1453,
+    "metrics_saved": {
+      "n": 51666,
+      "accuracy": 0.6890411489180506,
+      "roc_auc": 0.7598884003716795,
+      "brier_score": 0.20670643128582078,
+      "log_loss": 0.6311599058905419
+    },
+    "metrics_rule_only_scenario": {
+      "n": 51666,
+      "accuracy": 0.6890411489180506,
+      "roc_auc": 0.759908439278689,
+      "brier_score": 0.20668943649712768,
+      "log_loss": 0.6311056686517471
+    },
+    "metrics_rule_and_bestof_scenario": {
+      "n": 51666,
+      "accuracy": 0.6890411489180506,
+      "roc_auc": 0.7599047752697421,
+      "brier_score": 0.20669226329615778,
+      "log_loss": 0.6311163990340761
+    },
+    "metrics_verified_policy_completed_saved": {
+      "n": 33294,
+      "accuracy": 0.6801525800444524,
+      "roc_auc": 0.7489403349742532,
+      "brier_score": 0.20831411939291505,
+      "log_loss": 0.6223554504581996
+    },
+    "metrics_verified_policy_completed_scenario": {
+      "n": 33294,
+      "accuracy": 0.6801525800444524,
+      "roc_auc": 0.7489779843959821,
+      "brier_score": 0.20828699352942956,
+      "log_loss": 0.6222696778404693
+    },
+    "scenario_limit": "Frozen p/q scoring-only sensitivity, not a newly trained or fully historically verified model. Inferred/unresolved policies retain original probabilities; all original artifacts remain unchanged.",
+    "environment_joblib": "1.5.3"
+  },
+  "original_inputs_preserved": true,
+  "code_sha256": {
+    "audit.py": "1c6ea4af2b0471d5a086b1cf2c59061b3a3218f6840a1cb337b7748670cc5c50",
+    "engine.py": "f966aae7a06561b12c4748bcbfab0886df941a86f81f7f1bd0cdd60f709b5633",
+    "production_adapter.py": "ce5b984ba26d11ba06d63c701857cc7f129767927a56eb2d74af24a1928d11b1",
+    "registry.py": "2ee32d65ff9291e929817304834f2000b28f0d1ace3fdf789f4aefb029fd0fd4",
+    "sources.json": "65757e4afc90e4ec7edec2ecb4964685ebe34f83ca81e0c0c4e62233d208bb68",
+    "test_reference.py": "3dde117167ef03528d21959818d3a88c2deacbb7811f81957b5cdc15f5b49bdf"
+  }
+}

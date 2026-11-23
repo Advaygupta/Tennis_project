@@ -1,5 +1,10 @@
 # Standalone validation of the tennis scoring formula
 
+The later [historical scoring audit](historical/report.md) adds independent checks
+of historical deciding-set extensions, an evidence-scoped rule registry, the full
+51,666-row saved-probability comparison and separate scoring corrections. It does
+not retrain models or overwrite the original predictions.
+
 > Scope note: this folder validates the earlier standard-set formula with a seven-point tiebreak at 6-6. The current V1.1 notebook additionally implements historical deciding-set rules. Use this folder as a regression check for the shared standard-set calculation, not as validation of the complete historical rule mapping.
 
 ## Finding
