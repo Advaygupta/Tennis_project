@@ -1,0 +1,48 @@
+test_bad_weights (test_final_evaluation.CalibrationTests.test_bad_weights) ... ok
+test_boundaries (test_final_evaluation.CalibrationTests.test_boundaries) ... ok
+test_boundary_diagnostic_finite (test_final_evaluation.CalibrationTests.test_boundary_diagnostic_finite) ... ok
+test_constant_logit_undefined (test_final_evaluation.CalibrationTests.test_constant_logit_undefined) ... ok
+test_empty_bins_retained (test_final_evaluation.CalibrationTests.test_empty_bins_retained) ... ok
+test_equal_frequency (test_final_evaluation.CalibrationTests.test_equal_frequency) ... ok
+test_frequency_ties (test_final_evaluation.CalibrationTests.test_frequency_ties) ... ok
+test_invalid_bins (test_final_evaluation.CalibrationTests.test_invalid_bins) ... ok
+test_invalid_outcomes (test_final_evaluation.CalibrationTests.test_invalid_outcomes) ... ok
+test_invalid_probabilities (test_final_evaluation.CalibrationTests.test_invalid_probabilities) ... ok
+test_known_bins (test_final_evaluation.CalibrationTests.test_known_bins) ... ok
+test_known_logistic_diagnostic (test_final_evaluation.CalibrationTests.test_known_logistic_diagnostic) ... ok
+test_no_probability_mutation (test_final_evaluation.CalibrationTests.test_no_probability_mutation) ... ok
+test_offset_intercept_analytic (test_final_evaluation.CalibrationTests.test_offset_intercept_analytic) ... ok
+test_one_class_undefined (test_final_evaluation.CalibrationTests.test_one_class_undefined) ... ok
+test_perfect_group_calibration (test_final_evaluation.CalibrationTests.test_perfect_group_calibration) ... ok
+test_permutation_invariance (test_final_evaluation.CalibrationTests.test_permutation_invariance) ... ok
+test_separation_not_reported_finite (test_final_evaluation.CalibrationTests.test_separation_not_reported_finite) ... ok
+test_winner_orientation (test_final_evaluation.CalibrationTests.test_winner_orientation) ... ok
+test_clipping_sensitivity (test_final_evaluation.LossTests.test_clipping_sensitivity) ... ok
+test_contribution_adds_to_mean (test_final_evaluation.LossTests.test_contribution_adds_to_mean) ... ok
+test_logloss_analytic (test_final_evaluation.LossTests.test_logloss_analytic) ... ok
+test_observed_outcome_orientation (test_final_evaluation.LossTests.test_observed_outcome_orientation) ... ok
+test_outcome_regions_partition (test_final_evaluation.LossTests.test_outcome_regions_partition) ... ok
+test_positive_median_negative_mean (test_final_evaluation.LossTests.test_positive_median_negative_mean) ... ok
+test_probability_boundaries_loss (test_final_evaluation.LossTests.test_probability_boundaries_loss) ... ok
+test_tail_signed_absolute_differ (test_final_evaluation.LossTests.test_tail_signed_absolute_differ) ... ok
+test_calendar_whole_event_anchor (test_final_evaluation.ReproducibilityTests.test_calendar_whole_event_anchor) ... ok
+test_cluster_bootstrap_against_explicit_rows (test_final_evaluation.ReproducibilityTests.test_cluster_bootstrap_against_explicit_rows) ... ok
+test_existing_output_rejected (test_final_evaluation.ReproducibilityTests.test_existing_output_rejected) ... ok
+test_fixed_seed (test_final_evaluation.ReproducibilityTests.test_fixed_seed) ... ok
+test_hash_acceptance_and_rejection (test_final_evaluation.ReproducibilityTests.test_hash_acceptance_and_rejection) ... ok
+test_identical_models_zero_difference (test_final_evaluation.ReproducibilityTests.test_identical_models_zero_difference) ... ok
+test_identity_qualification_preserved (test_final_evaluation.ReproducibilityTests.test_identity_qualification_preserved) ... ok
+test_invalid_cluster_population (test_final_evaluation.ReproducibilityTests.test_invalid_cluster_population) ... ok
+test_missing_hash_file (test_final_evaluation.ReproducibilityTests.test_missing_hash_file) ... ok
+test_missing_population_rejected_by_shared_alignment (test_final_evaluation.ReproducibilityTests.test_missing_population_rejected_by_shared_alignment) ... ok
+test_no_calibrated_predictions_returned (test_final_evaluation.ReproducibilityTests.test_no_calibrated_predictions_returned) ... ok
+test_output_ancestor_rejected (test_final_evaluation.ReproducibilityTests.test_output_ancestor_rejected) ... ok
+test_package_allowlist_excludes_private_data (test_final_evaluation.ReproducibilityTests.test_package_allowlist_excludes_private_data) ... ok
+test_protected_output_rejected (test_final_evaluation.ReproducibilityTests.test_protected_output_rejected) ... ok
+test_result_comparison_rejects_changed_population (test_final_evaluation.ReproducibilityTests.test_result_comparison_rejects_changed_population) ... ok
+test_tampered_frozen_inputs_rejected_before_loading (test_final_evaluation.ReproducibilityTests.test_tampered_frozen_inputs_rejected_before_loading) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.348s
+
+OK

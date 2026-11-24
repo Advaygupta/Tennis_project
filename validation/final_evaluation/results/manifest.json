@@ -1,0 +1,61 @@
+{
+  "algorithm": "SHA-256",
+  "baseline_commit": "981fa3d7b23187f8b7073b1d6eadf9490023f8c8",
+  "inputs": {
+    "v1_1_results.joblib": {
+      "sha256": "ed2982fda03f9c3735b6694040451f29f833f5a305a05ab854a8fe2fb5b75912",
+      "bytes": 2981659
+    },
+    "v2_1_test_match_probabilities.parquet": {
+      "sha256": "1342c40da095d4551cd6f0a89f0981fb294b33c0a069f8df734faef1ab01a021",
+      "bytes": 3485107
+    },
+    "matches_v1_1_metadata.csv": {
+      "sha256": "943813de874ded92c15d6542b7e4684b7a2b992ea1871bb99d152819533c989f",
+      "bytes": 50676517
+    },
+    "saved_probability_comparison.csv": {
+      "sha256": "f8f6d5008042ece8184effe841f55e138db04c71e730f3544f642145e3283eef",
+      "bytes": 7888232
+    },
+    "paired_export.csv": {
+      "sha256": "e619b001e7dbd7c810a32a1fcd9453f8b844dc24f1c1b45424b5a85d60cd7105",
+      "bytes": 24101234
+    }
+  },
+  "reused_code": {
+    "alignment.py": "516460b6ec87e4dfdb89effdeda5455b7b5e0ad4fad583cbb0692bfb8ba07041",
+    "metrics.py": "acaf422e9bbad6d2f484c53736a5097f41acc334a51be04a38236172dd6c59c9",
+    "paired_bootstrap.py": "d009ab31fc1263f7e28487517dca8679ea62b013626ddc741d0fc6693c86c198",
+    "inventory.py": "91bebdcf5f4e0f76e70d1bed1ea56543c13b78ce277155588eb92d4f31039891"
+  },
+  "preserved_inputs": true,
+  "code": {
+    "build_package.py": "2e0e3565709a246738f0e03d1277442f050f605ebd891c74f9645cdd860f0335",
+    "calibration.py": "68a0a78b42dda4485bfcc852000bb52fbc568a411b1a1ec2613064312f1ddcfb",
+    "compare_results.py": "626675c161e53561d51279440b23f293c8c7ae75110ec071a65f0bc270934a23",
+    "logloss_diagnostics.py": "e2c19b6d8613a56ca317b7449f18bac2c06fa8bbb93144e77787ac1e876a7d8f",
+    "plots.py": "0a4698f02005fa9ed4c00e82c37716a367f1d313467debc3e55880ad4316adfb",
+    "run_evaluation.py": "19e6a52c565062af30d7bc9b2af86021a920415fc705c532fc067a7b7b9cb8db",
+    "shared.py": "6221936fd99620df6303eb5a71a7e7f67cbe0bf8d17b5ac6911a5904684e51f4",
+    "test_final_evaluation.py": "5dd5eda3f4acc625ff2cb46893ab82dee214eec38fef97f644a66309044d549f",
+    "uncertainty.py": "699cb189407fd97b98eab2ef5e847d990a6580edc20525fceaa88647d903dedb",
+    "verify_artifacts.py": "086ce030cdb5baf4d1f1ddd760427649b26d4dcd481f3ee6c20312ce2e0f1195"
+  },
+  "output": {
+    "figures/calibration_deviation.svg": "17a347e9fa95b793edd221fd18367b3b7c2c46e8353738f1f01d56746eb832cc",
+    "figures/confidence.svg": "95277641c0f0a9d583fede033dff5f8885cb4ee0578c9af494f11a8e0290caae",
+    "figures/loss_concentration.svg": "aeeeb46c35b7526fe40792a36ab6fcb550d1ccd8ecff3690bb5e0adc4b0ee2a8",
+    "figures/reliability.svg": "eec8d7666b1e3a63f602aab47b9689084c99a647b3e9bf833b6d63cfb4da7769",
+    "reliability_bins.csv": "d145889b67c55e52ec72b541cc1f295c9e8c8dd21147d95267f78467955590a6",
+    "summary.json": "a65949fbe54b9d88aa3a1a11602c5f23bf8ec9f6550a82a8b2bb366a4e30b81b",
+    "tail_attribution.csv": "d6b61b2ad01e4edb8c480ea551928a3e5afa00f5e310b982ce304688e4bebbb9"
+  },
+  "invocation": {
+    "replicates": 5000,
+    "seed": 20261124,
+    "route": "preserved_Point3_export",
+    "scoring_sidecar": true
+  },
+  "note": "Manifest excludes itself and later prose/test receipts. Publication manifest covers those separately. Baseline is the immutable preceding GitHub source commit; publication commit contains these exact code bytes. A self-referential current commit SHA cannot be included in its own hashed contents."
+}

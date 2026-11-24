@@ -1,0 +1,231 @@
+{
+  "scope": "Read-only notebook JSON inspection; no cells executed; no outputs interpreted as authenticated artifacts",
+  "date": "2026-11-24",
+  "evidence": [
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 32,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "0478e41eb62103dbdc328ee89403b080caba6ba49e656a6efc63a057c5f51a48",
+      "selected_source_lines": [
+        "val_preds = enet.predict(X_val_log)",
+        "val_preds = np.clip(val_preds, 0, 1)",
+        "mae = mean_absolute_error(y_valA_log, val_preds)",
+        "rmse = np.sqrt(mean_squared_error(y_valA_log, val_preds))",
+        "r2 = r2_score(y_valA_log, val_preds)"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 154,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "477c253412d37a66844eeb4262595988458a7f992fb5252fa2e5a5270513e572",
+      "selected_source_lines": [
+        "# Inverse-MAE weights are estimated strictly on the held-out validation partition."
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 170,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "62bca5be9492c77d3340f7f11298046accf77a3ecd7b19e67228a7e592a919bc",
+      "selected_source_lines": [
+        "X_train_val = pd.concat([X_train, X_val], axis = 0)",
+        "y_train_valA = pd.concat([y_trainA, y_valA], axis = 0)",
+        "y_train_valB = pd.concat([y_trainB, y_valB], axis = 0)",
+        "X_train_val_log = pd.concat([X_train_log, X_val_log], axis = 0)"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 173,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "89e01e6a62f172795a45853cd24bddf61eced13442eb1c1733ba5e2830749520",
+      "selected_source_lines": [
+        "# Each player is refitted on train+validation with a fresh, training-fitted scaler.",
+        "enet_A.fit(X_train_val_log, y_train_valA)",
+        "enet_B.fit(X_train_val_log, y_train_valB)",
+        "joblib.dump(enet_A, MODEL_PATH_A)",
+        "joblib.dump(enet_B, MODEL_PATH_B)"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 175,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "252b419ddd02a55574b5a5cb7a4d613b1dfd36ed8ca218ac6114b1fb15d21bf3",
+      "selected_source_lines": [
+        "xgb_A.fit(X_train_val, y_train_valA)",
+        "xgb_B.fit(X_train_val, y_train_valB)",
+        "joblib.dump(xgb_A, MODEL_PATH_A)",
+        "joblib.dump(xgb_B, MODEL_PATH_B)"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 177,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "4aef5f239b9598459c869517777e0b944b7d4847347183391ce00a208d6e614a",
+      "selected_source_lines": [
+        "lgbm_A.fit(X_train_val, y_train_valA)",
+        "lgbm_B.fit(X_train_val, y_train_valB)",
+        "joblib.dump(lgbm_A, MODEL_PATH_A)",
+        "joblib.dump(lgbm_B, MODEL_PATH_B)"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 179,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "e3304521cf13c304738a031470ec2ae5a5889d245421e5f7337260919ed1b993",
+      "selected_source_lines": [
+        "cat_A.fit(X_train_val, y_train_valA)",
+        "cat_B.fit(X_train_val, y_train_valB)",
+        "joblib.dump(cat_A, MODEL_PATH_A)",
+        "joblib.dump(cat_B, MODEL_PATH_B)"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 193,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "946412c6a4b0efa58f46722c9fee03d079757984a9cb8cea99789fd865e93367",
+      "selected_source_lines": [
+        "# Freeze inverse-MAE weights from validation predictions; test labels are for evaluation only.",
+        "val_pred_df = joblib.load(PROJECT_DIR / \"v1_1_individual_model_prediction_dataframe.joblib\")"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 209,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "854e62edca9a6772270cba1cda088e54e9a9d8595007c4a98dbee7b47bc4709e",
+      "selected_source_lines": [
+        "enet_A = joblib.load(model_dir / \"enet_final_playerA.pkl\")",
+        "enet_B = joblib.load(model_dir / \"enet_final_playerB.pkl\")",
+        "lgbm_A = joblib.load(model_dir / \"lightGBM_final_playerA.pkl\")",
+        "lgbm_B = joblib.load(model_dir / \"lightGBM_final_playerB.pkl\")",
+        "xgb_A = joblib.load(model_dir / \"XGBoost_final_playerA.pkl\")",
+        "xgb_B = joblib.load(model_dir / \"XGBoost_final_playerB.pkl\")",
+        "cat_A = joblib.load(model_dir / \"catBoost_final_playerA.pkl\")",
+        "cat_B = joblib.load(model_dir / \"catBoost_final_playerB.pkl\")",
+        "# Freeze ensemble weights using validation targets only; no test-label fitting.",
+        "val_preds = joblib.load(PROJECT_DIR / \"v1_1_individual_model_prediction_dataframe.joblib\")"
+      ]
+    },
+    {
+      "file": "03_v1_1_model_training.ipynb",
+      "cell_zero_based": 232,
+      "notebook_sha256": "a23f1b2985c9eaef5d48c7b8c3380be8b0bcab8b1bf6881d39df5b1c38e5409e",
+      "cell_source_sha256": "c517be3f48f46fedfa699fcc51ed6df0d281ad0b8b8596442dc392fb957296bb",
+      "selected_source_lines": [
+        "joblib.dump(anal_data, PATH)"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 156,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "9d9c6cdf35cb0e5f107194173afee8c93ab2633498994b79907d382b85faaf0e",
+      "selected_source_lines": [
+        "    \"xgboost\": joblib.load(MODEL_DIR / \"stage2_models/XGBoost_stage2_v2_1.pkl\"),",
+        "    \"lightgbm\": joblib.load(MODEL_DIR / \"stage2_models/lightGBM_stage2_v2_1.pkl\"),",
+        "    \"catboost\": joblib.load(MODEL_DIR / \"stage2_models/catBoost_stage2_v2_1.pkl\"),",
+        "    \"sgd\": joblib.load(MODEL_DIR / \"stage1_models/sgd_stage1_v2_1.pkl\"),",
+        "# Only validation data are evaluated here; test is not yet loaded.",
+        "    raise ValueError(\"Stacking validation rows do not match V1.1 metadata\")",
+        "print(\"\\nStacking validation log loss:\", log_loss(y_val, stack_val_probs))",
+        "print(\"Stacking validation ROC-AUC:\", roc_auc_score(y_val, stack_val_probs))",
+        "joblib.dump(meta_model, ensemble_dir / \"stack_xgb_lgbm_cat_sgd_v2_1.pkl\")",
+        "pred_df.to_parquet(PROJECT_DIR / \"predictions/v2_1_validation_individual.parquet\", index=False)"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 158,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "b8e32d3ea30780c41fe28d0a58e220c56671c4683505bcee72328313197ece5a",
+      "selected_source_lines": [
+        "# Build exactly the V1.1 training + validation partitions; never include test.",
+        "X_train_val = pd.concat([X_train, X_val], ignore_index=True)",
+        "X_train_val_log = pd.concat([X_train_log, X_val_log], ignore_index=True)",
+        "y_train_val = pd.concat([y_train, y_val], ignore_index=True)",
+        "assert len(X_train_val) == len(X_train_val_log) == len(y_train_val)",
+        "assert X_train_val.columns.equals(X_train.columns)",
+        "assert X_train_val_log.columns.equals(X_train_log.columns)",
+        "print(\"Final retraining matches:\", len(y_train_val))"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 161,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "8afc0d9b387905687d94be38407f1536cc0b2b67e894392ce79cb0651ad243d6",
+      "selected_source_lines": [
+        "cat = clone(joblib.load(PROJECT_DIR / \"models/stage2_models/catBoost_stage2_v2_1.pkl\"))",
+        "cat.fit(X_train_val, y_train_val)",
+        "joblib.dump(cat, SAVE_PATH)"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 163,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "5c43750dbdae8e967016f7642f492eff8135276526c196f75ef29b0b04e5f013",
+      "selected_source_lines": [
+        "lgbm = clone(joblib.load(PROJECT_DIR / \"models/stage2_models/lightGBM_stage2_v2_1.pkl\"))",
+        "lgbm.fit(X_train_val, y_train_val)",
+        "joblib.dump(lgbm, SAVE_PATH)"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 165,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "47e0285f404fa546914829f711afe21b3d4fe618827a6673afce7e748bb4c612",
+      "selected_source_lines": [
+        "xgb = clone(joblib.load(PROJECT_DIR / \"models/stage2_models/XGBoost_stage2_v2_1.pkl\"))",
+        "xgb.fit(X_train_val, y_train_val)",
+        "joblib.dump(xgb, SAVE_PATH)"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 167,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "396093853cff1068cea717cecf30540e585bb6cc71fbba215977430ca33193f7",
+      "selected_source_lines": [
+        "sgd_final = clone(joblib.load(PROJECT_DIR / \"models/stage1_models/sgd_stage1_v2_1.pkl\"))",
+        "# Fit the scaler and classifier together on train + validation log features.",
+        "sgd_final.fit(X_train_val_log, y_train_val)",
+        "joblib.dump(sgd_final, SAVE_PATH)"
+      ]
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 170,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "39be5e367f858df028a57e83e22ea30bf40596236d473195f4954969b759edfe",
+      "selected_source_lines": []
+    },
+    {
+      "file": "05_v2_1_model_training.ipynb",
+      "cell_zero_based": 173,
+      "notebook_sha256": "e924fe4803ac5a5411738f47b43b44b26ac8115699f1e454c82564b99c778858",
+      "cell_source_sha256": "3119fe932e47dfd1e86aac75b021e96a7a75eae85ca8e1377865f120ff14cd65",
+      "selected_source_lines": [
+        "p_four = np.column_stack([test_probabilities[c] for c in validation_columns])",
+        "# The stacking meta-model is fitted in the validation section only (never on test).",
+        "    saved_stack = joblib.load(stack_model_path)",
+        "test_predictions.to_parquet(output_path, index=False)",
+        "    \"primary_ensemble_weights\": dict(zip(validation_columns, ensemble_weights.tolist())),",
+        "    \"final_training\": \"V1.1 train + validation; test labels unused for fitting or selection\","
+      ]
+    }
+  ],
+  "supplied_validation_match_prediction_files": [],
+  "referenced_but_not_supplied": [
+    "v1_1_individual_model_prediction_dataframe.joblib"
+  ],
+  "conclusion": "No authenticated, ID-bearing out-of-sample validation MATCH probability pair for both final models was supplied. V1 referenced validation predictions are serve regressions used to select weights. Notebook source describes final train+validation refits. Neither source text nor its execution counts authenticate prediction dates or artifact lineage. No calibrator was fitted; no test-fitted diagnostic coefficients were applied to probabilities."
+}

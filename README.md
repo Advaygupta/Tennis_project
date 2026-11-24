@@ -58,6 +58,17 @@ Both rows cover the 51,666-record chronological test population. The [independen
 
 ## Quick verification
 
+The [final calibration and reproducibility package](validation/final_evaluation/README.md)
+adds reliability diagrams, binning sensitivity, event/block uncertainty and
+log-loss tail attribution using frozen outputs only. Its [report](validation/final_evaluation/report.md)
+finds much larger grouped calibration errors and more extreme adverse predictions
+for V1.1. It includes 43 tests, hashes, rights/provenance notes and a compact
+public package builder. No author-side notebook/model reruns are required.
+The recorded run reuses the preserved Point 3 aligned export; original-Parquet
+reproduction is available but was not exercised in that runtime. Conditional V1
+row order and the prior temporal/historical limitations remain explicit.
+
+
 The [paired evaluation package](validation/paired_evaluation/README.md) uses frozen
 predictions only, with 5,000 paired bootstrap replicates per design. It preserves
 the original full population and reports completed-match, supported-policy and

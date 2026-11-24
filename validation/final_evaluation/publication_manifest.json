@@ -1,0 +1,127 @@
+{
+  "algorithm": "SHA-256",
+  "baseline_commit": "981fa3d7b23187f8b7073b1d6eadf9490023f8c8",
+  "scope": "Added public Point 4 files, excluding this self-referential manifest and the enclosing ZIP/checksum",
+  "files": {
+    ".gitattributes": {
+      "sha256": "f2ec5e852cafabd7836ec4f20d6c678c7475118212a577466b5e36ef8aa4effa",
+      "bytes": 107
+    },
+    ".gitignore": {
+      "sha256": "259848f83c0851c9bcff83b459c5fb08a01265f336ff792078f1b65bb29727e8",
+      "bytes": 43
+    },
+    "build_package.py": {
+      "sha256": "2e0e3565709a246738f0e03d1277442f050f605ebd891c74f9645cdd860f0335",
+      "bytes": 2117
+    },
+    "calibration.py": {
+      "sha256": "68a0a78b42dda4485bfcc852000bb52fbc568a411b1a1ec2613064312f1ddcfb",
+      "bytes": 5585
+    },
+    "compare_results.py": {
+      "sha256": "626675c161e53561d51279440b23f293c8c7ae75110ec071a65f0bc270934a23",
+      "bytes": 1832
+    },
+    "figures/calibration_deviation.svg": {
+      "sha256": "17a347e9fa95b793edd221fd18367b3b7c2c46e8353738f1f01d56746eb832cc",
+      "bytes": 81580
+    },
+    "figures/confidence.svg": {
+      "sha256": "95277641c0f0a9d583fede033dff5f8885cb4ee0578c9af494f11a8e0290caae",
+      "bytes": 73916
+    },
+    "figures/loss_concentration.svg": {
+      "sha256": "aeeeb46c35b7526fe40792a36ab6fcb550d1ccd8ecff3690bb5e0adc4b0ee2a8",
+      "bytes": 86322
+    },
+    "figures/reliability.svg": {
+      "sha256": "eec8d7666b1e3a63f602aab47b9689084c99a647b3e9bf833b6d63cfb4da7769",
+      "bytes": 106436
+    },
+    "inventory.md": {
+      "sha256": "124224fac4eb08d933412ee253a7197efd06140af54c223a65db6b5a2b7210ec",
+      "bytes": 4402
+    },
+    "logloss_diagnostics.py": {
+      "sha256": "e2c19b6d8613a56ca317b7449f18bac2c06fa8bbb93144e77787ac1e876a7d8f",
+      "bytes": 4357
+    },
+    "plots.py": {
+      "sha256": "0a4698f02005fa9ed4c00e82c37716a367f1d313467debc3e55880ad4316adfb",
+      "bytes": 5624
+    },
+    "README.md": {
+      "sha256": "97f0a2996a631c8ecbe5f32c2a86a3dacbcd98639366f34b0a6a6a9bc9383133",
+      "bytes": 8238
+    },
+    "report.md": {
+      "sha256": "193bbf66b3a966f83e01a27d773700b8099ec8199876b58234c81a20e8129f67",
+      "bytes": 13675
+    },
+    "requirements.txt": {
+      "sha256": "03ed550938ec29e5be59b5114654eef9153d4088169adb77933145c10d898f64",
+      "bytes": 80
+    },
+    "results/manifest.json": {
+      "sha256": "2c4653821e162cc2aade5e206faf297473e60983ac3d763ebf56a5c09ee57cfa",
+      "bytes": 3366
+    },
+    "results/reliability_bins.csv": {
+      "sha256": "d145889b67c55e52ec72b541cc1f295c9e8c8dd21147d95267f78467955590a6",
+      "bytes": 16291
+    },
+    "results/summary.json": {
+      "sha256": "a65949fbe54b9d88aa3a1a11602c5f23bf8ec9f6550a82a8b2bb366a4e30b81b",
+      "bytes": 1367317
+    },
+    "results/tail_attribution.csv": {
+      "sha256": "d6b61b2ad01e4edb8c480ea551928a3e5afa00f5e310b982ce304688e4bebbb9",
+      "bytes": 2788
+    },
+    "results/tests.txt": {
+      "sha256": "759c3c6607e3d82f7bc8a66c9b9835bc5b41845366e91b95be65ccf4eee6c476",
+      "bytes": 4801
+    },
+    "rights_and_provenance.md": {
+      "sha256": "487303a48766e6fd80cbcdd8a35324d17301de129fd3727492d467415e32c0cf",
+      "bytes": 7535
+    },
+    "run_evaluation.py": {
+      "sha256": "19e6a52c565062af30d7bc9b2af86021a920415fc705c532fc067a7b7b9cb8db",
+      "bytes": 12581
+    },
+    "shared.py": {
+      "sha256": "6221936fd99620df6303eb5a71a7e7f67cbe0bf8d17b5ac6911a5904684e51f4",
+      "bytes": 746
+    },
+    "test_final_evaluation.py": {
+      "sha256": "5dd5eda3f4acc625ff2cb46893ab82dee214eec38fef97f644a66309044d549f",
+      "bytes": 13508
+    },
+    "uncertainty.py": {
+      "sha256": "699cb189407fd97b98eab2ef5e847d990a6580edc20525fceaa88647d903dedb",
+      "bytes": 4453
+    },
+    "validation_prediction_inventory.json": {
+      "sha256": "fb584994b9ad10c100248f3981ea7272e13d4b5c55fc9a3eb6f53e53789e96af",
+      "bytes": 12134
+    },
+    "verify_artifacts.py": {
+      "sha256": "086ce030cdb5baf4d1f1ddd760427649b26d4dcd481f3ee6c20312ce2e0f1195",
+      "bytes": 2526
+    }
+  },
+  "reused_helpers": {
+    "alignment.py": "516460b6ec87e4dfdb89effdeda5455b7b5e0ad4fad583cbb0692bfb8ba07041",
+    "metrics.py": "acaf422e9bbad6d2f484c53736a5097f41acc334a51be04a38236172dd6c59c9",
+    "paired_bootstrap.py": "d009ab31fc1263f7e28487517dca8679ea62b013626ddc741d0fc6693c86c198",
+    "inventory.py": "91bebdcf5f4e0f76e70d1bed1ea56543c13b78ce277155588eb92d4f31039891"
+  },
+  "tests": {
+    "count": 43,
+    "passed": true,
+    "receipt_sha256": "759c3c6607e3d82f7bc8a66c9b9835bc5b41845366e91b95be65ccf4eee6c476"
+  },
+  "restrictions": "No private row artifacts, notebooks, model checkpoints or vendored dependencies included"
+}
